@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* Custom CSS */
+/* 
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Outfit',sans-serif;
+  background:#0F1729;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#0F1729}
+::-webkit-scrollbar-thumb{background:#F5A800;border-radius:3px}
+
+.text-outline{
+  -webkit-text-stroke:2px rgba(255,255,255,0.28);
+  color:transparent;
+}
+
+.hero-grid-bg{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background-image:
+  linear-gradient(rgba(245,168,0,.04) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(245,168,0,.04) 1px,transparent 1px);
+  background-size:60px 60px;
+} */

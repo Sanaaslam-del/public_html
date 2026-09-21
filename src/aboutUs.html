@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="gOs1KlspZCM3eRefBEcousuzxfzmXPGHrigtenmHlSw" />
+  <meta name="robots" content="index, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preload" as="image" href="/images/about-us-software-company-bahawalpur-v2.webp" fetchpriority="high">
+
+  <!-- ✅ Title -->
+  <title>About VartexSoft | Software House in Bahawalpur Pakistan</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1028812633079142');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1028812633079142&ev=PageView&noscript=1" alt="pixel" /></noscript>
+
+  <!-- ✅ Meta Description -->
+  <meta name="description" content="Learn about VartexSoft, a leading software house and IT training center in Bahawalpur Pakistan. We build world-class digital solutions and train the next generation of developers.">
+
+  <!-- ✅ Keywords -->
+  <meta name="keywords" content="about VartexSoft, software house Bahawalpur, IT company Pakistan, software development team, tech training Bahawalpur, who is VartexSoft, CEO Areeb Sarwar">
+  <meta name="author" content="Areeb Sarwar - CEO VartexSoft">
+
+  <!-- ✅ Canonical -->
+  <link rel="canonical" href="https://vartexsoft.com/about">
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" href="/images/favicon-48.png" type="image/png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon-180.png">
+
+  <!-- ✅ OG Tags -->
+  <meta property="og:title" content="About VartexSoft - Software House in Bahawalpur">
+  <meta property="og:description" content="VartexSoft is a leading software house and IT training center in Bahawalpur Pakistan building world-class digital solutions.">
+  <meta property="og:image" content="https://vartexsoft.com/images/logo2.png">
+  <meta property="og:url" content="https://vartexsoft.com/about">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- ✅ Unified About Page Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://vartexsoft.com/about#webpage",
+        "url": "https://vartexsoft.com/about",
+        "name": "About VartexSoft",
+        "description": "VartexSoft is a premier software development house and IT training center in Bahawalpur Pakistan.",
+        "mainEntity": {
+          "@type": "Organization",
+          "@id": "https://vartexsoft.com/#organization",
+          "name": "VartexSoft",
+          "url": "https://vartexsoft.com",
+          "logo": "https://vartexsoft.com/images/logo2.png",
+          "image": "https://vartexsoft.com/images/about-us-software-company-bahawalpur-v2.webp",
+          "telephone": "+923007806086",
+          "email": "vartexsoft@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rohaan Plaza, Faisal Colony Street 1, Women University Road",
+            "addressLocality": "Bahawalpur",
+            "addressRegion": "Punjab",
+            "postalCode": "63100",
+            "addressCountry": "PK"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "29.3956",
+            "longitude": "71.6836"
+          },
+          "founder": {
+            "@type": "Person",
+            "name": "Areeb Sarwar",
+            "jobTitle": "Founder & CEO",
+            "email": "vartexsoft@gmail.com"
+          }
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- CSS Links -->
+  <link href="/src/output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    .owner-section {
+      position: relative;
+      overflow: hidden;
+      margin-top: 2.5rem;
+      background: linear-gradient(180deg, #f8f4ee 0%, #f4efe9 100%);
+    }
+
+    .owner-image,
+    .owner-content {
+      opacity: 0;
+      will-change: transform, opacity;
+      transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .owner-image {
+      transform: translateX(60px);
+    }
+
+    .owner-content {
+      transform: translateX(-60px);
+    }
+
+    .owner-section.is-visible .owner-image,
+    .owner-section.is-visible .owner-content {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .owner-card {
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .owner-card:hover {
+      box-shadow: 0 26px 48px rgba(16, 17, 32, 0.12);
+    }
+
+    .owner-card:hover .owner-portrait {
+      transform: scale(1.18);
+      border-radius: 28px;
+      clip-path: inset(0 round 28px);
+    }
+
+    .owner-badge {
+      border: 1.5px solid rgba(16, 17, 32, 0.7);
+      background: rgba(255, 255, 255, 0.2);
+      color: #101120;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .owner-title {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 0.05em;
+      text-transform: none;
+      line-height: 0.92;
+      color: #101120;
+      font-weight: 400;
+    }
+
+    .owner-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.25rem, 4vw, 4rem);
+      letter-spacing: 0.01em;
+      text-transform: none;
+      color: #101120;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    .owner-role {
+      font-size: clamp(1.05rem, 1.6vw, 1.6rem);
+      letter-spacing: -0.02em;
+      font-weight: 500;
+      color: #1a1a1a;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .owner-desc {
+      font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+      line-height: 1.7;
+      color: #222222;
+      font-family: 'Outfit', sans-serif;
+      max-width: 52rem;
+    }
+
+    .owner-email {
+      background: #111827;
+      color: #f3f4f6;
+      border: 1px solid rgba(17, 24, 39, 0.1);
+      border-radius: 9999px;
+      box-shadow: 0 8px 18px rgba(17, 24, 39, 0.12);
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: -0.02em;
+      margin-top: 20px;
+    }
+
+    .owner-email i {
+      color: #eab308;
+    }
+
+    .owner-portrait {
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      transform: scale(1.14);
+      transform-origin: center center;
+      border-radius: 28px;
+      clip-path: inset(0 round 28px);
+    }
+
+    .owner-image > div {
+      border-radius: 28px;
+      overflow: hidden;
+    }
+
+    #team .group {
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+      will-change: transform, box-shadow;
+    }
+
+    #team .group:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 30px rgba(17, 24, 39, 0.08);
+      border-color: rgba(250, 181, 22, 0.95);
+    }
+
+    #team .group:hover .w-25 {
+      transform: scale(1.06);
+    }
+
+    @media (max-width: 767px) {
+      .owner-image,
+      .owner-content {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+
+      .owner-section.is-visible .owner-image,
+      .owner-section.is-visible .owner-content {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .owner-image,
+      .owner-content,
+      .owner-card,
+      .owner-portrait {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50" style="font-family: outfit;">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 flex items-center justify-between px-6 py-4 bg-gray-50 border-b border-white/5 transition-all duration-300 shadow-xl">
+    <div>
+      <a href="../index.html"><img class="w-auto h-10" src="/images/logo2.png" alt="VartexSoft Logo - Software House Bahawalpur" width="180" height="48"></a>
+    </div>
+
+    <ul class="hidden lg:flex items-center gap-8 font-medium">
+      <li><a href="../index.html" class="relative group" style="font-family: bebas;">Home<span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#FAB516] transition-all duration-300 group-hover:w-full"></span></a></li>
+      <li><a href="services.html" class="relative group" style="font-family: bebas;">Services<span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#FAB516] transition-all duration-300 group-hover:w-full"></span></a></li>
+      <li><a href="courses.html" class="relative group" style="font-family: bebas;">Courses<span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#FAB516] transition-all duration-300 group-hover:w-full"></span></a></li>
+      <li><a href="dubai-services.html" class="relative group" style="font-family: bebas;">Dubai Services<span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#FAB516] transition-all duration-300 group-hover:w-full"></span></a></li>
+      <li><a href="blog.html" class="relative group" style="font-family: bebas;">Blogs<span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#FAB516] transition-all duration-300 group-hover:w-full"></span></a></li>
+      <li><a href="aboutUs.html" class="relative group text-[#FAB516] font-bold" style="font-family: bebas;">About Us<span class="absolute left-0 -bottom-1 w-full h-0.5 bg-[#FAB516]"></span></a></li>
+      <li><a href="contactUs.html" class="relative group" style="font-family: bebas;">Contact Us<span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#FAB516] transition-all duration-300 group-hover:w-full"></span></a></li>
+      <li><a href="applyForProject.html" class="bg-[#FAB516] text-white px-4 py-2 rounded-md font-bold text-[13px] transition-all duration-200 inline-block" style="font-family: bebas;">Get Started <span><i class="fa-solid fa-arrow-right"></i></span></a></li>
+    </ul>
+
+    <button id="menuBtn" class="lg:hidden text-2xl text-black" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-[#1B1C2A]">
+      <div class="flex flex-col px-4 py-4 gap-4 font-medium text-white">
+        <a href="../index.html" style="font-family: bebas;">Home</a>
+        <a href="services.html" style="font-family: bebas;">Services</a>
+        <a href="courses.html" style="font-family: bebas;">Courses</a>
+        <a href="dubai-services.html" style="font-family: bebas;">Dubai Services</a>
+        <a href="blog.html" style="font-family: bebas;">Blogs</a>
+        <a href="aboutUs.html" class="text-[#FAB516]" style="font-family: bebas;">About Us</a>
+        <a href="contactUs.html" style="font-family: bebas;">Contact Us</a>
+        <a href="applyForProject.html" style="font-family: bebas;" class="bg-[#FAB516] text-black text-center px-5 py-2 rounded-full">Get Started <span><i class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <!-- <section class="relative bg-cover min-h-30 pt-35" style="background-image: url('/images/about-us-software-company-bahawalpur-v2.webp'); background-position: center center;"> -->
+<section
+    class="relative bg-cover bg-no-repeat min-h-30 pt-35"
+style="
+    background-image: url('/images/about-us-software-company-bahawalpur-v2.webp');
+    background-position: center center;
+    background-size: 100% 100%;
+">
+    <div class="flex flex-col gap-4 md:w-1/2 text-center md:text-left px-12" data-aos="zoom-in" data-aos-duration="1000">
+
+      <div class="inline-flex mx-auto sm:mx-0 lg:self-start md:self-start items-center gap-2 bg-[#FAB516]/10 border border-[#FAB516]/30 text-[#FAB516] px-4 py-2 rounded-full text-[11px] font-semibold uppercase tracking-wide mb-2">
+        <span class="w-1.5 h-1.5 bg-[#FAB516] rounded-full inline-block animate-pulse"></span>
+        Our Story
+      </div>
+
+      <!-- H1 Optimized for SEO -->
+      <h1 class="text-outline leading-[.92] tracking-[2px] text-[#FAB516]" style="font-family: bebas; font-size: clamp(52px, 8vw, 58px);">
+        VartexSoft<br>
+        <span class="text-white" style="-webkit-text-stroke:0">Software house <br></span>
+        <span class="text-white">in</span>
+        <span class="text-[#FAB516]"> Bahawalpur</span>
+      </h1>
+
+      <p class="text-[18px] text-white leading-[1.7] max-w-130 mb-2 font-light">
+        VartexSoft is a leading software house and IT training center in Bahawalpur Pakistan. We build world-class web applications, mobile apps and digital solutions while training the next generation of developers and designers.
+      </p>
+
+      <div class="flex flex-wrap justify-center md:justify-start lg:justify-start gap-4 mb-11">
+        <a href="/services" class="inline-flex items-center gap-2.5 bg-[#FAB516] text-[#101120] px-9 py-4 rounded-lg font-bold text-[15px] tracking-[0.025em] no-underline transition-all duration-200 hover:bg-[#FAB516] hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(245,168,0,0.45)]">
+          Our Mission <span><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <a href="/contact" class="inline-flex items-center gap-2.5 border border-white/25 text-white px-12 py-4 rounded-lg font-semibold text-[15px] tracking-[0.025em] no-underline backdrop-blur-sm transition-all duration-200 hover:border-[#FAB516] hover:text-[#FAB516] hover:-translate-y-0.5">
+          Meet Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Owner Section -->
+  <section id="owner-section" class="owner-section py-12 px-[6%] md:py-16 lg:py-20">
+    <div class="mx-auto max-w-6xl">
+      <div class="owner-card overflow-hidden rounded-[28px] bg-white/40 shadow-[0_18px_40px_rgba(17,24,39,0.08)] backdrop-blur-sm">
+        <div class="grid grid-cols-1 gap-0 md:grid-cols-2 lg:grid-cols-2">
+          <div class="owner-content flex items-center p-6 sm:p-8 md:p-9 lg:p-12 md:order-1">
+            <div>
+              <div class="owner-badge mb-4 inline-flex items-center gap-2 rounded-full px-4 py-2 text-[11px] font-semibold tracking-[0.18em]">
+                <span class="h-2 w-2 rounded-full bg-[#E7B44A]"></span>
+                Meet The Owner
+              </div>
+
+              <h2 class="owner-title mb-6 text-[clamp(30px,3.8vw,58px)]">
+                A Vision Behind Vartexsoft
+              </h2>
+
+              <div class="mb-5">
+                <h3 class="owner-name text-[clamp(32px,3vw,60px)] leading-none">Areeb Sarwar</h3>
+                <p class="owner-role mt-2">Founder &amp; CEO</p>
+              </div>
+
+              <p class="owner-desc">
+                Areeb Sarwar is the Founder and CEO of Vartexsoft, driven by a vision to build innovative technology solutions, empower aspiring professionals, and create meaningful digital experiences. His leadership focuses on combining technology, creativity, and practical skills to help businesses and individuals grow in the digital world.
+              </p>
+
+              <a href="mailto:vartexsoft@gmail.com" class="owner-email mt-7 inline-flex items-center gap-2 px-5 py-3 text-[15px] font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_24px_rgba(17,24,39,0.15)]">
+                <i class="fa-solid fa-envelope"></i>
+                vartexsoft@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <div class="owner-image p-4 sm:p-5 md:pb-6 md:pl-6 md:pr-0 md:pt-6 lg:pb-7 lg:pl-7 lg:pr-0 lg:pt-7 md:order-2">
+            <div class="overflow-hidden rounded-[48px] bg-[#F3EEE7] shadow-[0_20px_35px_rgba(17,24,39,0.08)]">
+              <img src="/images/Areeb%20Sarwar.png" alt="Areeb Sarwar Founder and CEO of Vartexsoft" width="900" height="1100" loading="lazy" class="owner-portrait block h-[360px] w-full rounded-[48px] object-cover object-center md:h-[440px] lg:h-[520px]">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section id="mission" class="text-black py-10 md:py-15 lg:py-15 px-[6%]">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 lg:gap-20 items-center" data-aos="zoom-in" data-aos-duration="1000">
+
+      <div>
+        <div class="flex items-center gap-3 mb-5">
+          <span class="w-8 h-0.5 bg-[#FAB516]"></span>
+          <span class="text-[11px] font-bold tracking-[3px] uppercase text-[#FAB516]">
+            Who We Are
+          </span>
+        </div>
+
+        <h2 class="text-[#1B1C2A] text-[clamp(40px,5.5vw,68px)] leading-[0.95] font-bold mb-8">
+          DRIVEN BY <br>
+          <span class="text-[#FAB516]">PURPOSE,</span><br>
+          BUILT ON <br>
+          EXCELLENCE
+        </h2>
+
+        <p class="text-[17px] leading-relaxed mb-6">
+          VartexSoft was founded in Bahawalpur with a single belief:
+          <span class="font-medium">technology should empower people</span>,
+          not intimidate them. From startups to enterprises and fresh graduates to professionals,
+          we build the tools and knowledge that help them grow.
+        </p>
+
+        <p class="text-[17px] leading-relaxed">
+          We operate as both a software house and a training institute. Our developers build
+          real-world digital products while our mentors help the next generation gain the
+          skills needed to succeed in the tech industry.
+        </p>
+
+        <div class="mt-10 border-l-2 border-[#FAB516] pl-6">
+          <p class="text-[18px] italic">
+            "We don't just write code or teach skills — we build futures."
+          </p>
+          <div class="mt-3 text-[12px] text-[#FAB516] font-semibold tracking-[2px] uppercase">
+            <!-- — VartexSoft Team -->
+             VartexSoft Team
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards -->
+      <div class="flex flex-col gap-6">
+
+        <div class="group border bg-[#1B1C2A] border-white/10 rounded-2xl p-8 transition hover:border-[#FAB516]/40 hover:-translate-y-1">
+          <div class="flex gap-5 items-start">
+            <div class="w-12 h-12 p-3 bg-[#FAB516]/10 rounded-full flex items-center justify-center text-2xl group-hover:bg-[#FAB516]/20">
+              <span class="text-[#FAB516]"><i class="fa-solid fa-bullseye"></i></span>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-[#FAB516] mb-2">Our Mission</h3>
+              <p class="text-sm text-white leading-relaxed">
+                As Bahawalpur's trusted software house, we deliver high-quality digital products and practical technology training that help businesses and individuals compete and succeed in the global market.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="group border bg-[#1B1C2A] border-white/10 rounded-2xl p-8 transition hover:border-[#FAB516]/40 hover:-translate-y-1">
+          <div class="flex gap-5 items-start">
+            <div class="w-12 h-12 p-3 bg-[#FAB516]/10 rounded-full flex items-center justify-center text-2xl group-hover:bg-[#FAB516]/20">
+              <span class="text-[#FAB516]"><i class="fa-solid fa-eye"></i></span>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-[#FAB516] mb-2">Our Vision</h3>
+              <p class="text-sm text-white leading-relaxed">
+                To become a trusted technology partner where innovative software is built and talented developers, designers, and marketers are trained for the future.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="group border bg-[#1B1C2A] border-white/10 rounded-2xl p-8 transition hover:border-[#FAB516]/40 hover:-translate-y-1">
+          <div class="flex gap-5 items-start">
+            <div class="w-12 h-12 p-3 bg-[#FAB516]/10 rounded-full flex items-center justify-center text-lg group-hover:bg-[#FAB516]/20">
+              <span class="text-[#FAB516]"><i class="fa-solid fa-gem"></i></span>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-[#FAB516] mb-2">Our Values</h3>
+              <p class="text-sm text-white leading-relaxed">
+                We believe in excellence, transparency, innovation, and continuous learning. Our success is measured not only by the software we build but by the impact we create for our clients and students.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="py-10 lg:py-15 md:py-15 px-[6%] bg-[#1B1C2A]">
+    <div class="flex items-center gap-3 mb-5">
+      <span class="w-8 h-0.5 bg-[#FAB516]"></span>
+      <span class="text-[11px] font-bold tracking-[3px] uppercase text-[#FAB516]">
+        What Drives Us
+      </span>
+    </div>
+
+    <h2 class="text-[clamp(38px,5vw,64px)] font-bold leading-none tracking-wide mb-4 lg:mb-16 md:mb-16 text-white" style="font-family: bebas;">
+      THE <span class="text-[#FAB516]">VALUES</span><br> WE LIVE BY
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+
+      <div class="group border border-white/10 rounded-2xl p-8 transition hover:-translate-y-2 hover:border-[#FAB516]/40">
+        <div class="w-14 h-14 bg-[#FAB516]/10 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-[#FAB516]/20">
+          <span class="text-[#FAB516]"><i class="fa-solid fa-bolt"></i></span>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-[#FAB516]">Speed</h3>
+        <p class="text-sm text-white leading-relaxed">
+          We ship fast without cutting corners. Velocity and quality are not opposites — they're partners.
+        </p>
+        <div class="mt-6 h-0.5 w-0 bg-[#FAB516] group-hover:w-full transition-all duration-500"></div>
+      </div>
+
+      <div class="group border border-white/10 rounded-2xl p-8 transition hover:-translate-y-2 hover:border-[#FAB516]/40">
+        <div class="w-14 h-14 bg-[#FAB516]/10 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-[#FAB516]/20">
+          <span class="text-[#FAB516]"><i class="fa-solid fa-trophy"></i></span>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-[#FAB516]">Excellence</h3>
+        <p class="text-sm text-white leading-relaxed">
+          Every deliverable passes through a strong quality check. We only deliver work we are proud of.
+        </p>
+        <div class="mt-6 h-0.5 w-0 bg-[#FAB516] group-hover:w-full transition-all duration-500"></div>
+      </div>
+
+      <div class="group border border-white/10 rounded-2xl p-8 transition hover:-translate-y-2 hover:border-[#FAB516]/40">
+        <div class="w-14 h-14 bg-[#FAB516]/10 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-[#FAB516]/20">
+          <span class="text-[#FAB516]"><i class="fa-solid fa-hand-back-fist"></i></span>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-[#FAB516]">Integrity</h3>
+        <p class="text-sm text-white leading-relaxed">
+          We believe in honest timelines, transparent communication, and building trust with every client.
+        </p>
+        <div class="mt-6 h-0.5 w-0 bg-[#FAB516] group-hover:w-full transition-all duration-500"></div>
+      </div>
+
+      <div class="group border border-white/10 rounded-2xl p-8 transition hover:-translate-y-2 hover:border-[#FAB516]/40">
+        <div class="w-14 h-14 bg-[#FAB516]/10 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-[#FAB516]/20">
+          <span class="text-[#FAB516]"><i class="fa-solid fa-seedling"></i></span>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-[#FAB516]">Growth</h3>
+        <p class="text-sm text-white leading-relaxed">
+          We continuously improve our skills, support our team, and help our clients grow through technology.
+        </p>
+        <div class="mt-6 h-0.5 w-0 bg-[#FAB516] group-hover:w-full transition-all duration-500"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="py-10 lg:py-15 md:py-15 px-[6%] text-black">
+
+    <div class="flex items-center gap-3 mb-5">
+      <span class="w-8 h-0.5 bg-[#FAB516]"></span>
+      <span class="text-[11px] font-bold tracking-[3px] uppercase text-[#FAB516]">
+        The People
+      </span>
+    </div>
+
+    <h2 class="text-[clamp(38px,5vw,64px)] font-bold leading-none mb-5" style="font-family: bebas;">
+      MEET THE <br> <span class="text-[#FAB516]">TEAM</span>
+    </h2>
+
+    <p class="text-[17px] max-w-125 mb-4 lg:mb-16 md:mb-16">
+      Meet the passionate team behind VartexSoft Bahawalpur — engineers, designers, marketers, and educators working together to build impactful technology.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+
+      <div class="group border border-[#FAB516] rounded-2xl overflow-hidden transition hover:-translate-y-2">
+        <div class="relative h-50 flex items-center justify-center bg-gray-800">
+          <div class="w-25 h-25 rounded-full bg-[#FAB516]/20 border-2 border-[#FAB516]/40 flex items-center justify-center text-[#FAB516] text-3xl font-bold group-hover:scale-110 transition">
+            AS
+          </div>
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-[#FAB516] text-black text-[10px] font-semibold px-3 py-1 rounded-full uppercase">
+            Founder & CEO
+          </div>
+        </div>
+        <div class="p-6 text-black">
+          <h3 class="text-lg font-semibold mb-1" style="font-family: bebas;">Areeb Sarwar</h3>
+          <p class="text-xs mb-3">Full-Stack Architect & CEO</p>
+          <div class="flex gap-2 flex-wrap">
+            <span class="bg-gray-700 text-white text-[10px] px-2.5 py-1 rounded-full">MERN</span>
+            <span class="bg-gray-700 text-white text-[10px] px-2.5 py-1 rounded-full">AI Tech</span>
+            <span class="bg-gray-700 text-white text-[10px] px-2.5 py-1 rounded-full">Leadership</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="group border border-[#FAB516] rounded-2xl overflow-hidden transition hover:-translate-y-2">
+        <div class="relative h-50 flex items-center justify-center bg-gray-800">
+          <div class="w-25 h-25 rounded-full bg-[#FAB516]/20 border-2 border-[#FAB516]/40 flex items-center justify-center text-[#FAB516] text-3xl font-bold group-hover:scale-110 transition">
+            IR
+          </div>
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-[#FAB516] text-black text-[10px] font-semibold px-3 py-1 rounded-full uppercase">
+            Manager
+          </div>
+        </div>
+        <div class="p-6 text-black">
+          <h3 class="text-lg font-semibold mb-1" style="font-family: bebas;">Iram</h3>
+          <p class="text-xs mb-3">Operations & Management</p>
+          <div class="flex gap-2 flex-wrap">
+            <span class="bg-gray-700 text-white text-[10px] px-2.5 py-1 rounded-full">Management</span>
+            <span class="bg-gray-700 text-white text-[10px] px-2.5 py-1 rounded-full">Operations</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="group border border-[#FAB516] rounded-2xl overflow-hidden transition hover:-translate-y-2">
+        <div class="relative h-50 flex items-center justify-center bg-gray-800">
+          <div class="w-25 h-25 rounded-full bg-[#FAB516]/20 border-2 border-[#FAB516]/40 flex items-center justify-center text-[#FAB516] text-3xl font-bold group-hover:scale-110 transition">
+            IQ
+          </div>
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-[#FAB516] text-black text-[10px] font-semibold px-3 py-1 rounded-full uppercase">
+            Team Manager
+          </div>
+        </div>
+        <div class="p-6 text-black">
+          <h3 class="text-lg font-semibold mb-1" style="font-family: bebas;">Iqra</h3>
+          <p class="text-xs mb-3">Team Coordination & Delivery</p>
+          <div class="flex gap-2 flex-wrap">
+            <span class="bg-gray-700 text-white text-[10px] px-2.5 py-1 rounded-full">Team Lead</span>
+            <span class="bg-gray-700 text-white text-[10px] px-2.5 py-1 rounded-full">Planning</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="group border border-[#FAB516] rounded-2xl overflow-hidden transition hover:-translate-y-2">
+        <div class="relative h-50 flex items-center justify-center bg-gray-800">
+          <div class="w-25 h-25 rounded-full bg-[#FAB516]/20 border-2 border-[#FAB516]/40 flex items-center justify-center text-[#FAB516] text-3xl font-bold group-hover:scale-110 transition">
+            MA
+          </div>
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-[#FAB516] text-black text-[10px] font-semibold px-3 py-1 rounded-full uppercase">
+            Web Developer
+          </div>
+        </div>
+        <div class="p-6 text-black">
+          <h3 class="text-lg font-semibold mb-1" style="font-family: bebas;">Mr Ahad</h3>
+          <p class="text-xs mb-3">Frontend & Web Engineer</p>
+          <div class="flex gap-2 flex-wrap">
+            <span class="bg-gray-700 text-white text-[10px] px-2.5 py-1 rounded-full">React</span>
+            <span class="bg-gray-700 text-white text-[10px] px-2.5 py-1 rounded-full">Tailwind</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="py-10 lg:py-15 md:py-15 px-[6%] bg-[#1B1C2A]">
+    <div class="text-center mb-4 lg:py15 md:mb-16">
+      <div class="flex items-center justify-center gap-3 mb-6">
+        <span class="block w-8 h-0.5 bg-[#FAB516]"></span>
+        <span class="text-[11px] font-bold tracking-[3px] uppercase text-[#FAB516]">Our Arsenal</span>
+        <span class="block w-8 h-0.5 bg-[#FAB516]"></span>
+      </div>
+      <h2 class="text-[clamp(38px,5vw,64px)] leading-none tracking-wide text-white" style="font-family: bebas;">
+        TECHNOLOGIES WE <span class="text-[#FAB516]">MASTER</span>
+      </h2>
+    </div>
+
+    <div class="flex flex-wrap items-center justify-center gap-4 mb-8">
+      <button id="frontend" class="btn inline-flex items-center gap-2.5 bg-[#FAB516] text-[#101120] px-9 py-4 rounded-lg font-bold text-[15px] tracking-[0.025em] no-underline transition-all duration-200 hover:bg-[#FAB516] hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(245,168,0,0.45)] cursor-pointer">
+        Frontend
+      </button>
+      <button id="backend" class="btn inline-flex items-center gap-2.5 bg-[#FAB516] text-[#101120] px-9 py-4 rounded-lg font-bold text-[15px] tracking-[0.025em] no-underline transition-all duration-200 hover:bg-[#FAB516] hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(245,168,0,0.45)] cursor-pointer">
+        Backend
+      </button>
+      <button id="database" class="btn inline-flex items-center gap-2.5 bg-[#FAB516] text-[#101120] px-9 py-4 rounded-lg font-bold text-[15px] tracking-[0.025em] no-underline transition-all duration-200 hover:bg-[#FAB516] hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(245,168,0,0.45)] cursor-pointer">
+        Database
+      </button>
+      <button id="design" class="btn inline-flex items-center gap-2.5 bg-[#FAB516] text-[#101120] px-9 py-4 rounded-lg font-bold text-[15px] tracking-[0.025em] no-underline transition-all duration-200 hover:bg-[#FAB516] hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(245,168,0,0.45)] cursor-pointer">
+        UI UX Design
+      </button>
+      <button id="cms" class="btn inline-flex items-center gap-2.5 bg-[#FAB516] text-[#101120] px-9 py-4 rounded-lg font-bold text-[15px] tracking-[0.025em] no-underline transition-all duration-200 hover:bg-[#FAB516] hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(245,168,0,0.45)] cursor-pointer">
+        CMS
+      </button>
+    </div>
+
+    <div id="card-container" class="flex flex-wrap justify-center gap-6"></div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="relative bg-[#FAB516] py-15 px-[6%] text-center overflow-hidden">
+    <div class="relative z-10">
+      <h2 class="text-[clamp(44px,6vw,80px)] text-[#101120] tracking-[2px] leading-[0.95] mb-6" style="font-family: bebas;">
+        READY TO BUILD <br> SOMETHING GREAT?
+      </h2>
+      <p class="text-[18px] text-[rgba(15,23,41,0.65)] max-w-125 mx-auto mb-10 font-light leading-[1.6]">
+        Join 200+ businesses and 5,000+ students who chose Vartex Soft to level up. Let's create something extraordinary.
+      </p>
+      <a href="/contact" class="inline-flex items-center gap-2.5 bg-white text-black py-4 px-11 rounded-lg font-bold text-[16px] tracking-[0.025em] transition-all duration-300 hover:bg-[#101120] hover:text-white hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(0,0,0,0.3)]">
+        <span class="text-[#FAB516]"><i class="fa-solid fa-rocket"></i></span> Start Your Project Today
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#101120] text-white border-t border-white/10 pt-10 pb-5 px-[6%]">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-5">
+      <div>
+        <div class="flex items-center gap-3 mb-5">
+          <a href="/"><img class="w-70 md:w-54 lg:w-54 h-auto" src="/images/vartex-Soft-final-logo-web.png" alt="VartexSoft Logo - Software House Bahawalpur" width="220" height="60" loading="lazy"></a>
+        </div>
+
+        <p class="text-[14px] leading-[1.7] mb-6 font-light max-w-75">
+          Based in Bahawalpur, Pakistan, we specialize in building modern digital solutions and empowering the next generation of developers.
+        </p>
+
+        <div class="flex gap-1 text-white">
+          <a href="https://www.tiktok.com/@vartexsoft?lang=en-GB" class="w-10 h-10 border border-white/10 rounded-lg flex items-center justify-center transition-all duration-200 hover:border-[#FAB516] hover:bg-[#FAB516]/10 hover:-translate-y-0.5"><span><i class="fa-brands fa-tiktok"></i></span></a>
+          <a href="https://www.facebook.com/profile.php?id=61586228192824" class="w-10 h-10 border border-white/10 rounded-lg flex items-center justify-center transition-all duration-200 hover:border-[#FAB516] hover:bg-[#FAB516]/10 hover:-translate-y-0.5"><span><i class="fa-brands fa-facebook-f"></i></span></a>
+          <a href="https://www.instagram.com/vartexsoft/" class="w-10 h-10 border border-white/10 rounded-lg flex items-center justify-center transition-all duration-200 hover:border-[#FAB516] hover:bg-[#FAB516]/10 hover:-translate-y-0.5"><span><i class="fa-brands fa-instagram"></i></span></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-bebas text-[18px] tracking-[0.025em] mb-2 text-[#FAB516]" style="font-family: bebas;">Quick Links</h4>
+        <ul class="flex flex-col gap-0.5">
+          <li><a href="/about" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">About Us</a></li>
+          <li><a href="/contact" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Contact Us</a></li>
+          <li><a href="/courses" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Courses</a></li>
+          <li><a href="/services" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Services</a></li>
+          <li><a href="/web-development-dubai" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Dubai Services</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-[18px] tracking-[0.025em] mb-2 text-[#FAB516]" style="font-family: bebas;">Services</h4>
+        <ul class="flex flex-col gap-0.5">
+          <li><a href="/web-development-service" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Web Development</a></li>
+          <li><a href="/digital-marketing-service" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Digital Marketing</a></li>
+          <li><a href="/graphic-designing-service" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Graphic Designing</a></li>
+          <li><a href="/app-development-service" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">App Development</a></li>
+          <li><a href="/wordpress-service" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">WordPress</a></li>
+        </ul>
+      </div>
+
+      <div class="relative">
+        <h4 class="text-[18px] tracking-[0.025em] mb-2 text-[#FAB516]" style="font-family: bebas;">Courses</h4>
+        <ul id="courseList" class="overflow-hidden max-h-25 transition-all duration-300 flex flex-col gap-0.5">
+          <li><a href="/web-development-course" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Web Development</a></li>
+          <li><a href="/digital-marketing-course" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Digital Marketing</a></li>
+          <li><a href="/graphic-designing-course" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Graphic Designing</a></li>
+          <li><a href="/app-development-course" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">App Development</a></li>
+          <li><a href="/wordpress-course" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">WordPress</a></li>
+          <li><a href="/shopify-services" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Shopify</a></li>
+          <li><a href="/seo-services" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">SEO</a></li>
+          <li><a href="/tiktok-monetization" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">TikTok Monetization</a></li>
+          <li><a href="/youtube-automation" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">YouTube Automation</a></li>
+        </ul>
+        <button id="toggleCourses" class="mt-2 text-yellow-400 font-semibold hover:underline">More</button>
+      </div>
+    </div>
+
+    <div class="pt-4 border-t border-white flex flex-wrap justify-center md:justify-between lg:justify-between items-center">
+      <p class="text-[13px] text-center mb-2 md:mb-0 lg:mb-0 font-light">
+        © 2026 <a href="/" class="text-[#FAB516]">VartexSoft</a>. All rights reserved. Think Higher. Build Smarter.
+      </p>
+
+      <p class="text-[13px] font-light">
+        Privacy Policy · Terms of Service · Cookie Policy
+      </p>
+      <p class="text-[12px] text-white/40 text-center w-full mt-2 font-light">
+        Rohaan Plaza, Faisal Colony Street 1, Women University Road, Bahawalpur, Punjab, Pakistan ·
+        <a href="tel:+923007806086" class="hover:text-[#FAB516] transition-colors">+92 300 780 6086</a> ·
+        CEO: Areeb Sarwar
+      </p>
+    </div>
+  </footer>
+
+  <!-- AOS js -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const ownerSection = document.getElementById('owner-section');
+    if (ownerSection) {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!prefersReducedMotion) {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            ownerSection.classList.add('is-visible');
+            obs.unobserve(ownerSection);
+          });
+        }, { threshold: 0.2 });
+        observer.observe(ownerSection);
+      } else {
+        ownerSection.classList.add('is-visible');
+      }
+    }
+
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (menuBtn) {
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+
+    const toggleBtn = document.getElementById('toggleCourses');
+    const courseList = document.getElementById('courseList');
+    let expanded = false;
+
+    if (toggleBtn && courseList) {
+      toggleBtn.addEventListener('click', () => {
+        if (!expanded) {
+          courseList.style.maxHeight = courseList.scrollHeight + "px";
+          toggleBtn.textContent = "Less";
+        } else {
+          courseList.style.maxHeight = "6rem";
+          toggleBtn.textContent = "More";
+        }
+        expanded = !expanded;
+      });
+    }
+
+    const cards = {
+      frontend: [
+        { icon: "/images/htmlIcon.jpg", text: "HTML" },
+        { icon: "/images/cssIcon.jpg", text: "CSS" },
+        { icon: "/images/jsIcon.jpg", text: "Javascript" },
+        { icon: "/images/react.jpg", text: "Reactjs" },
+        { icon: "/images/tailwindIcon.jpg", text: "TailwindCss" },
+        { icon: "/images/materialUI.webp", text: "Material UI" }
+      ],
+      backend: [
+        { icon: "/images/nodejs.png", text: "Nodejs" },
+        { icon: "/images/nextjsIcon.jpg", text: "Nextjs" },
+        { icon: "/images/express-js.webp", text: "Expressjs" },
+        { icon: "/images/mongoDBIcon.jpg", text: "MongoDB" },
+        { icon: "/images/firebaseIcon.jpg", text: "firebase" }
+      ],
+      database: [
+        { icon: "/images/mySqlIcon.jpg", text: "MySql" },
+        { icon: "/images/mongoDBIcon.jpg", text: "MongoDB" },
+        { icon: "/images/PostgreIcon.webp", text: "PostgreSQL" },
+        { icon: "/images/firebaseIcon.jpg", text: "firebase" },
+        { icon: "/images/dynamo-db.webp", text: "DynamoDB" }
+      ],
+      design: [
+        { icon: "/images/figma.jpg", text: "Figma" },
+        { icon: "/images/AdobeIllustratorIcon.webp", text: "Adobe Illustrator" },
+        { icon: "/images/AdobeXDIcon.jpg", text: "Adobe XD" },
+        { icon: "/images/photoshopIcon.jpg", text: "Adobe photoshop" }
+      ],
+      cms: [
+        { icon: "/images/woocommerceIcon.png", text: "WooCommerce" },
+        { icon: "/images/wordpressIcon.jpg", text: "Wordpress" },
+        { icon: "/images/shopifyIcon.jpg", text: "shopify" },
+        { icon: "/images/wix.webp", text: "Wix" },
+        { icon: "/images/webflow.webp", text: "Webflow" }
+      ],
+    }
+
+    const container = document.getElementById("card-container");
+    const allButtons = document.querySelectorAll(".btn");
+
+    allButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        setActive(btn);
+        showCards(btn.id);
+      });
+    });
+
+    function setActive(clickedBtn) {
+      allButtons.forEach(btn => {
+        btn.style.outline = "none";
+        btn.style.color = "black";
+      });
+      clickedBtn.style.outline = "1px solid white";
+      clickedBtn.style.color = "white";
+    }
+
+    function showCards(category) {
+      if (!container) return;
+      container.innerHTML = "";
+      cards[category].forEach(card => {
+        container.innerHTML += `
+          <div style="width: 120px; height: 150px;" class="bg-white border border-white/6 rounded-xl p-5 flex flex-col items-center gap-3 text-center transition-all duration-300 hover:border-[#FAB516]/35 hover:-translate-y-1.5 hover:shadow-[0_16px_40px_rgba(0,0,0,0.4)]">
+            <img src="${card.icon}" alt="${card.text}" class="w-12 h-12 object-contain mb-4 rounded-lg" />
+            <p class="text-[15px] font-bold" style="font-family:bebas;">${card.text}</p>
+          </div>
+        `;
+      });
+    }
+
+    showCards("frontend");
+    const defaultBtn = document.getElementById("frontend");
+    if (defaultBtn) setActive(defaultBtn);
+  </script>
+</body>
+
+</html>

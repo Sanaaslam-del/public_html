@@ -1,0 +1,1138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <title>How to Build a Responsive Website from Scratch | VartexSoft</title>
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1028812633079142');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1028812633079142&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+    <meta name="description" content="Learn to build a responsive website from scratch with HTML, CSS and JavaScript — step-by-step guide with real code from VartexSoft, Bahawalpur.">
+    <meta name="keywords"
+        content="how to build a responsive website, responsive website from scratch, HTML CSS JavaScript tutorial, web development Bahawalpur, mobile-first design, freelance web developer Bahawalpur, CSS media queries, VartexSoft blog, Areeb Sarwar">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="Areeb Sarwar">
+    <link rel="canonical" href="https://vartexsoft.com/blog/how-to-build-responsive-website">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How to Build a Responsive Website from Scratch">
+    <meta property="og:description"
+        content="A practical, code-first guide to building responsive websites — from VartexSoft's web development team in Bahawalpur.">
+    <meta property="og:image" content="https://vartexsoft.com/images/web_development.png">
+    <meta property="og:url" content="https://vartexsoft.com/blog/how-to-build-responsive-website">
+    <meta property="og:locale" content="en_PK">
+    <meta property="article:author" content="Areeb Sarwar">
+    <meta property="article:published_time" content="2026-06-10">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Build a Responsive Website from Scratch">
+    <meta name="twitter:description" content="A practical guide to responsive web design from VartexSoft Bahawalpur.">
+    <meta name="twitter:image" content="https://vartexsoft.com/images/web_development.png">
+
+    <link rel="icon" href="/images/favicon-48.png" type="image/png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon-180.png">
+
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* MOBILE OVERFLOW FIX — keeps the whole page from scrolling sideways */
+        html, body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
+        :root {
+            --vx-navy: #101120;
+            --vx-navy-2: #1B1C2A;
+            --vx-gold: #FAB516;
+            --vx-gold-light: #FFD060;
+            --vx-blue: #0073aa;
+            --vx-blue-light: #4db8e8;
+        }
+
+        * { scroll-behavior: smooth; }
+
+        body {
+            -webkit-font-smoothing: antialiased;
+        }
+
+        ::selection {
+            background: var(--vx-gold);
+            color: var(--vx-navy);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 9px; }
+        ::-webkit-scrollbar-track { background: var(--vx-navy); }
+        ::-webkit-scrollbar-thumb {
+            background: var(--vx-gold);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover { background: var(--vx-gold-light); }
+
+        /* Code blocks */
+        .code-block {
+            background: linear-gradient(180deg, #16172a 0%, #11121f 100%);
+            border: 1px solid rgba(250, 181, 22, 0.12);
+            border-radius: 14px;
+            overflow: hidden;
+            max-width: 100%;
+            box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.5);
+            transition: border-color 0.25s ease, transform 0.25s ease;
+        }
+
+        .code-block:hover {
+            border-color: rgba(250, 181, 22, 0.35);
+            transform: translateY(-2px);
+        }
+
+        .code-block-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .code-dots { display: flex; gap: 6px; }
+        .code-dots span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .code-dots span:nth-child(1) { background: #ff5f56; }
+        .code-dots span:nth-child(2) { background: #ffbd2e; }
+        .code-dots span:nth-child(3) { background: #27c93f; }
+
+        .code-lang-tag {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--vx-gold);
+            background: rgba(250, 181, 22, 0.1);
+            padding: 3px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(250, 181, 22, 0.25);
+        }
+
+        .code-block pre {
+            margin: 0;
+            padding: 18px 20px;
+            overflow-x: auto;
+            max-width: 100%;
+        }
+
+        .code-block code {
+            font-family: 'Courier New', Consolas, monospace;
+            font-size: 13px;
+            line-height: 1.75;
+            color: #d6e2ff;
+            white-space: pre;
+            word-break: break-word;
+        }
+
+        /* Inline code */
+        article p code, article li code {
+            background: rgba(250, 181, 22, 0.12);
+            color: #b9650b;
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            font-weight: 600;
+            border: 1px solid rgba(250, 181, 22, 0.25);
+        }
+
+        /* Step number cards */
+        .step-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            max-width: 100%;
+        }
+
+        .step-card:hover {
+            transform: translateX(4px);
+        }
+
+        .step-num-box {
+            transition: transform 0.3s ease, background 0.3s ease;
+            box-shadow: 0 4px 14px -4px rgba(250, 181, 22, 0.3);
+        }
+
+        .step-card:hover .step-num-box {
+            transform: scale(1.08) rotate(-3deg);
+        }
+
+        .step-num-box-blue {
+            box-shadow: 0 4px 14px -4px rgba(0, 115, 170, 0.3);
+        }
+
+        /* Connector line between steps */
+        .step-connector {
+            position: absolute;
+            left: 24px;
+            top: 56px;
+            bottom: -32px;
+            width: 2px;
+            background: linear-gradient(180deg, rgba(250, 181, 22, 0.3), rgba(250, 181, 22, 0));
+        }
+
+        /* FAQ accordion */
+        .faq-item {
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #ffffff;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(250, 181, 22, 0.5);
+            box-shadow: 0 6px 20px -8px rgba(250, 181, 22, 0.25);
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            color: #101120;
+        }
+
+        .faq-icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(250, 181, 22, 0.12);
+            border: 1px solid rgba(250, 181, 22, 0.3);
+            color: var(--vx-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+            background: var(--vx-gold);
+            color: var(--vx-navy);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+            padding: 0 20px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 20px 20px;
+        }
+
+        #navbar {
+            transition: box-shadow 0.3s ease, padding 0.3s ease;
+        }
+
+        .pill-tag span {
+            animation: pulse-dot 2s infinite;
+        }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .cta-glow {
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-glow::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(250, 181, 22, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .author-ring {
+            box-shadow: 0 0 0 3px rgba(250, 181, 22, 0.15);
+        }
+
+        footer a[target="_blank"]:hover {
+            box-shadow: 0 4px 14px -4px rgba(250, 181, 22, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .step-connector { display: none; }
+        }
+    </style>
+
+    <!-- Structured Data: BlogPosting Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "How to Build a Responsive Website from Scratch",
+      "description": "A step-by-step, code-first guide to building responsive websites using HTML, CSS and JavaScript — from VartexSoft's web development team in Bahawalpur.",
+      "image": "https://vartexsoft.com/images/web_development.png",
+      "datePublished": "2026-06-10",
+      "dateModified": "2026-06-30",
+      "author": {
+        "@type": "Person",
+        "name": "Areeb Sarwar",
+        "jobTitle": "CEO",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "VartexSoft"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "VartexSoft",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://vartexsoft.com/images/vartex-Soft-final-logo-web.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://vartexsoft.com/blog/how-to-build-responsive-website"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://vartexsoft.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://vartexsoft.com/blog"},
+        {"@type": "ListItem", "position": 3, "name": "How to Build a Responsive Website from Scratch", "item": "https://vartexsoft.com/blog/how-to-build-responsive-website"}
+      ]
+    }
+    </script>
+    <!-- Structured Data: Organization (LocalBusiness) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "VartexSoft",
+      "url": "https://vartexsoft.com",
+      "logo": "https://vartexsoft.com/images/vartex-Soft-final-logo-web.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Areeb Sarwar"
+      },
+      "telephone": "+92-300-7806086",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rohaan Plaza, Faisal Colony Street 1, Women University Road",
+        "addressLocality": "Bahawalpur",
+        "addressRegion": "Punjab",
+        "addressCountry": "PK"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"FAQPage",
+"mainEntity":[
+
+{
+"@type":"Question",
+"name":"Do I need to know JavaScript to build a responsive website?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"No. A fully responsive layout can be built using only HTML and CSS with media queries, Flexbox and Grid. JavaScript is only needed for interactive elements like a mobile menu or smooth scrolling."
+}
+},
+
+{
+"@type":"Question",
+"name":"What is the difference between Flexbox and CSS Grid?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Flexbox is best for arranging items in a single row or column, like a navbar or a row of cards. CSS Grid is better for two-dimensional layouts where you need control over both rows and columns at the same time, like a full page layout."
+}
+},
+
+{
+"@type":"Question",
+"name":"How long does it take to build a responsive website from scratch?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"A simple one-page responsive website can be built in one to three days by a beginner. A complete multi-page business website usually takes one to three weeks depending on design complexity and features."
+}
+},
+
+{
+"@type":"Question",
+"name":"Does a responsive design actually improve SEO rankings?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Yes. Google uses mobile-first indexing, which means it primarily evaluates the mobile version of a site for ranking. A responsive, fast-loading website performs significantly better in search results than a non-responsive one."
+}
+},
+
+{
+"@type":"Question",
+"name":"Why choose VartexSoft for web development in Bahawalpur?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"VartexSoft is a software house in Bahawalpur offering custom Website Development, SEO, Web Design and Digital Marketing services. We build fast, fully responsive websites using modern technologies and provide ongoing support after launch."
+}
+}
+
+]
+}
+</script>
+</head>
+
+<body class="bg-[#101120]" style="font-family: outfit;">
+    <!-- Navbar -->
+    <nav id="navbar"
+        class="fixed top-0 w-full z-50 flex items-center justify-between px-6 py-4 bg-gray-50 border-b border-white/5 transition-all duration-300 shadow-xl">
+        <div>
+            <a href="../../index.html"><img class="w-auto h-10" src="/images/logo2.png" alt="VartexSoft logo" width="160"
+                    height="40" loading="eager"></a>
+        </div>
+        <ul class="hidden lg:flex items-center gap-8 font-medium">
+            <li><a href="../../index.html" class="relative group" style="font-family: bebas;">Home<span
+                        class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#FAB516] transition-all duration-300 group-hover:w-full"></span></a>
+            </li>
+            <li><a href="../services.html" class="relative group" style="font-family: bebas;">Services<span
+                        class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#FAB516] transition-all duration-300 group-hover:w-full"></span></a>
+            </li>
+            <li><a href="../courses.html" class="relative group" style="font-family: bebas;">Courses<span
+                        class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#FAB516] transition-all duration-300 group-hover:w-full"></span></a>
+            </li>
+            <li><a href="../blog.html" class="relative group" style="font-family: bebas;">Blog<span
+                        class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#FAB516] transition-all duration-300 group-hover:w-full"></span></a>
+            </li>
+            <li><a href="../aboutUs.html" class="relative group" style="font-family: bebas;">About Us<span
+                        class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#FAB516] transition-all duration-300 group-hover:w-full"></span></a>
+            </li>
+            <li><a href="../contactUs.html" class="relative group" style="font-family: bebas;">Contact Us<span
+                        class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#FAB516] transition-all duration-300 group-hover:w-full"></span></a>
+            </li>
+            <li><a href="../applyForProject.html"
+                    class="bg-[#FAB516] text-white px-4 py-2 rounded-md font-bold text-[13px] transition-all duration-200 inline-block"
+                    style="font-family: bebas;">Get Started <span><i class="fa-solid fa-arrow-right"></i></span></a>
+            </li>
+        </ul>
+        <button id="menuBtn" class="lg:hidden text-2xl text-black"><i class="fa-solid fa-bars"></i></button>
+        <div id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-[#1B1C2A]">
+            <div class="flex flex-col px-4 py-4 gap-4 font-medium text-white">
+                <a class="hover:bg-[#1A2540] px-2 hover:rounded-lg hover:text-white" href="../../index.html"
+                    style="font-family: bebas;">Home</a>
+                <a class="hover:bg-[#1A2540] px-2 hover:rounded-lg hover:text-white" href="../services.html"
+                    style="font-family: bebas;">Services</a>
+                <a class="hover:bg-[#1A2540] px-2 hover:rounded-lg hover:text-white" href="../courses.html"
+                    style="font-family: bebas;">Courses</a>
+                <a class="hover:bg-[#1A2540] px-2 hover:rounded-lg hover:text-white" href="../blog.html"
+                    style="font-family: bebas;">Blog</a>
+                <a class="hover:bg-[#1A2540] px-2 hover:rounded-lg hover:text-white" href="../aboutUs.html"
+                    style="font-family: bebas;">About Us</a>
+                <a class="hover:bg-[#1A2540] px-2 hover:rounded-lg hover:text-white" href="../contactUs.html"
+                    style="font-family: bebas;">Contact Us</a>
+                <a href="../applyForProject.html" style="font-family: bebas;"
+                    class="bg-[#FAB516] text-black text-center px-5 py-2 rounded-full">Get Started <span><i
+                            class="fa-solid fa-arrow-right"></i></span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="pt-24 pb-2 px-6 md:px-[6%] bg-[#1B1C2A] text-white text-sm" aria-label="Breadcrumb">
+        <ol class="flex items-center space-x-2 flex-wrap">
+            <li><a href="/" class="hover:text-[#FAB516] transition-colors">Home</a><span class="mx-2 text-white/50">/</span></li>
+            <li><a href="/blog" class="hover:text-[#FAB516] transition-colors">Blog</a><span class="mx-2 text-white/50">/</span></li>
+            <li class="text-[#FAB516] font-semibold" aria-current="page">How to Build a Responsive Website</li>
+        </ol>
+    </nav>
+
+    <!-- Article Header -->
+    <section class="relative bg-cover bg-center min-h-30 pt-30 md:mt-5" style="background-image: url('/images/web_development.png');">
+        <div class="absolute inset-0 bg-black/65"></div>
+        <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-center min-h-[500px]">
+
+            <!-- Left Side Content -->
+            <div class="flex flex-col gap-4 text-center md:text-left px-12 text-white" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+
+                <div class="inline-flex mx-auto sm:mx-0 lg:self-start md:self-start items-center gap-2 bg-[#FAB516]/10 border border-[#FAB516]/30 text-[#FAB516] px-4 py-2 rounded-full text-[11px] font-semibold uppercase tracking-wide mb-2">
+                    <span class="w-1.5 h-1.5 bg-[#FAB516] rounded-full inline-block"></span>
+                    Web Development
+                </div>
+
+                <h1 class="text-outline leading-[.92] tracking-[2px]" style="font-family: bebas; font-size: clamp(42px, 8vw, 58px);">
+                    How to Build a <br><span class="text-[#FAB516]" style="-webkit-text-stroke:0">Responsive Website</span>
+                </h1>
+                <p>Think Higher. Build Smarter.</p>
+                <p class="text-[17px] leading-[1.7] max-w-130 font-light">
+                    A code-first, step-by-step guide with real <strong class="text-white/90">HTML, CSS and JavaScript</strong> —
+                    the <strong class="text-white/90">responsive design</strong> fundamentals every developer should know,
+                    from VartexSoft's team in Bahawalpur.
+                </p>
+
+                <!-- Search -->
+                <div class="flex items-center text-white/70 gap-4 text-[13px] flex-wrap mb-11">
+                    <span><i class="fa-regular fa-calendar text-[#FAB516] mr-1.5"></i>June 10, 2026</span>
+                    <span><i class="fa-regular fa-clock text-[#FAB516] mr-1.5"></i>9 min read</span>
+                    <span><i class="fa-solid fa-user text-[#FAB516] mr-1.5"></i>By Areeb Sarwar, CEO of VartexSoft</span>
+                </div>
+
+            </div>
+
+            <!-- Right Side Image -->
+            <div class="flex justify-center items-center px-12 pb-12 md:pb-0" data-aos="fade-left" data-aos-duration="1000">
+                <img src="/images/web_development.png" alt="How to build a responsive website - VartexSoft Bahawalpur" class="max-w-full h-auto object-contain max-h-[400px]">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Article Body -->
+    <article class="px-6 md:px-[6%] pb-16 bg-gray-50 text-black" style="max-width: 100%; overflow-x: hidden;">
+        <div class="max-w-3xl mx-auto pt-10" data-aos="fade-up" data-aos-duration="800">
+
+            <p class="text-[16px] leading-[1.8] mb-5">
+    Ever opened a website on your phone and the menu just... isn't there? Or the text is so small you have to zoom in to read it? That's what happens when a site is built only for desktop and mobile gets ignored until the end. We see this all the time and it's avoidable if you build responsive from the very first line of code.
+</p>
+            <p class="text-[16px] leading-[1.8] mb-10">
+                At <strong>VartexSoft</strong>, a <strong>Software House in Bahawalpur</strong>, responsive design isn't an
+                afterthought — it's how every project starts. This guide walks through exactly how we approach
+                <strong>Web Development in Bahawalpur</strong>, with real code you can copy, paste and adapt for your
+                own project, whether it's a personal portfolio or a full business site.
+            </p>
+            <p class="text-[16px] leading-[1.8] mb-8">
+                You don't need a framework or a page builder to follow along. Just plain HTML, CSS and a little
+                JavaScript — the same fundamentals every developer should understand before reaching for Bootstrap or
+                Tailwind.
+            </p>
+
+            <!-- Step 1 -->
+            <div class="step-card flex gap-4 mb-10 relative" data-aos="fade-up">
+                <div class="step-connector"></div>
+                <div class="shrink-0 w-12 h-12 rounded-xl bg-[#FAB516]/10 border border-[#FAB516]/30 flex items-center justify-center text-[#FAB516] font-bold text-[16px] step-num-box"
+                    style="font-family: bebas;">01</div>
+                <div class="flex-1 min-w-0">
+                    <h2 class="text-[22px] font-semibold mb-2" style="font-family: bebas;">START WITH THE VIEWPORT
+                        META TAG</h2>
+                    <p class="text-[15px] leading-[1.8] mb-3">
+                        This single line in your HTML <code>&lt;head&gt;</code> is the difference between a page
+                        that scales correctly on mobile and one that loads zoomed out like a desktop site squeezed
+                        onto a phone screen.
+                    </p>
+                    <div class="code-block mb-3">
+                        <div class="code-block-header">
+                            <div class="code-dots"><span></span><span></span><span></span></div>
+                            <span class="code-lang-tag">HTML</span>
+                        </div>
+                        <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+                    </div>
+                    <p class="text-[15px] leading-[1.8]">
+                        Without it, every media query you write later will simply be ignored by mobile browsers. We
+                        add this before writing a single line of CSS on every project.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card flex gap-4 mb-10 relative" data-aos="fade-up">
+                <div class="step-connector"></div>
+                <div class="shrink-0 w-12 h-12 rounded-xl bg-[#0073aa]/15 border border-[#0073aa]/35 flex items-center justify-center text-[#4db8e8] font-bold text-[16px] step-num-box step-num-box-blue"
+                    style="font-family: bebas;">02</div>
+                <div class="flex-1 min-w-0">
+                    <h2 class="text-[22px] font-semibold mb-2" style="font-family: bebas;">RESET DEFAULTS AND USE A
+                        FLUID CONTAINER</h2>
+                    <p class="text-[15px] leading-[1.8] mb-3">
+                        Browsers apply their own default margins and box-sizing rules, which cause inconsistent
+                        spacing across devices. Start every project with a small reset and a container that uses
+                        percentage width instead of a fixed pixel value.
+                    </p>
+                    <div class="code-block mb-3">
+                        <div class="code-block-header">
+                            <div class="code-dots"><span></span><span></span><span></span></div>
+                            <span class="code-lang-tag">CSS</span>
+                        </div>
+                        <pre><code>* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}</code></pre>
+                    </div>
+                    <p class="text-[15px] leading-[1.8]">
+                        That <code>max-width: 100%</code> rule on images alone fixes one of the most common bugs we
+                        see — pictures breaking out of their containers on small screens.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card flex gap-4 mb-10 relative" data-aos="fade-up">
+                <div class="step-connector"></div>
+                <div class="shrink-0 w-12 h-12 rounded-xl bg-[#FAB516]/10 border border-[#FAB516]/30 flex items-center justify-center text-[#FAB516] font-bold text-[16px] step-num-box"
+                    style="font-family: bebas;">03</div>
+                <div class="flex-1 min-w-0">
+                    <h2 class="text-[22px] font-semibold mb-2" style="font-family: bebas;">BUILD THE NAVBAR WITH
+                        FLEXBOX</h2>
+                    <p class="text-[15px] leading-[1.8] mb-3">
+                        A navigation bar is the simplest place to start with Flexbox — one axis, a few items, evenly
+                        spaced. Here's the structure we use as a base before adding a mobile hamburger toggle.
+                    </p>
+                    <div class="code-block mb-3">
+                        <div class="code-block-header">
+                            <div class="code-dots"><span></span><span></span><span></span></div>
+                            <span class="code-lang-tag">CSS</span>
+                        </div>
+                        <pre><code>nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 5%;
+  background: #101120;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card flex gap-4 mb-10 relative" data-aos="fade-up">
+                <div class="step-connector"></div>
+                <div class="shrink-0 w-12 h-12 rounded-xl bg-[#0073aa]/15 border border-[#0073aa]/35 flex items-center justify-center text-[#4db8e8] font-bold text-[16px] step-num-box step-num-box-blue"
+                    style="font-family: bebas;">04</div>
+                <div class="flex-1 min-w-0">
+                    <h2 class="text-[22px] font-semibold mb-2" style="font-family: bebas;">USE CSS GRID FOR
+                        SELF-ADJUSTING LAYOUTS</h2>
+                    <p class="text-[15px] leading-[1.8] mb-3">
+                        For sections like service cards or a portfolio grid, <code>auto-fit</code> with
+                        <code>minmax()</code> removes the need for separate media queries for every breakpoint —
+                        the browser calculates how many columns fit on its own.
+                    </p>
+                    <div class="code-block mb-3">
+                        <div class="code-block-header">
+                            <div class="code-dots"><span></span><span></span><span></span></div>
+                            <span class="code-lang-tag">CSS</span>
+                        </div>
+                        <pre><code>.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}</code></pre>
+                    </div>
+                    <p class="text-[15px] leading-[1.8]">
+                        On a wide screen this might show four columns. On a phone, it automatically drops to one —
+                        no extra code required.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-card flex gap-4 mb-10 relative" data-aos="fade-up">
+                <div class="step-connector"></div>
+                <div class="shrink-0 w-12 h-12 rounded-xl bg-[#FAB516]/10 border border-[#FAB516]/30 flex items-center justify-center text-[#FAB516] font-bold text-[16px] step-num-box"
+                    style="font-family: bebas;">05</div>
+                <div class="flex-1 min-w-0">
+                    <h2 class="text-[22px] font-semibold mb-2" style="font-family: bebas;">WRITE MEDIA QUERIES THAT
+                        MATCH REAL DEVICES</h2>
+                    <p class="text-[15px] leading-[1.8] mb-3">
+                        You don't need a media query for every possible screen width. These three breakpoints cover
+                        the vast majority of real-world traffic we see across our clients' analytics.
+                    </p>
+                    <div class="code-block mb-3">
+                        <div class="code-block-header">
+                            <div class="code-dots"><span></span><span></span><span></span></div>
+                            <span class="code-lang-tag">CSS</span>
+                        </div>
+                        <pre><code>/* Tablet */
+@media (max-width: 1024px) {
+  .hero h1 { font-size: 2.2rem; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 1.8rem; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  body { font-size: 14px; }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step-card flex gap-4 mb-10 relative" data-aos="fade-up">
+                <div class="step-connector"></div>
+                <div class="shrink-0 w-12 h-12 rounded-xl bg-[#0073aa]/15 border border-[#0073aa]/35 flex items-center justify-center text-[#4db8e8] font-bold text-[16px] step-num-box step-num-box-blue"
+                    style="font-family: bebas;">06</div>
+                <div class="flex-1 min-w-0">
+                    <h2 class="text-[22px] font-semibold mb-2" style="font-family: bebas;">ADD A WORKING MOBILE
+                        MENU WITH JAVASCRIPT</h2>
+                    <p class="text-[15px] leading-[1.8] mb-3">
+                        CSS handles the layout, but the hamburger toggle itself needs a small script. Keep it
+                        simple — toggle a class, close the menu when a link is clicked.
+                    </p>
+                    <div class="code-block mb-3">
+                        <div class="code-block-header">
+                            <div class="code-dots"><span></span><span></span><span></span></div>
+                            <span class="code-lang-tag">JavaScript</span>
+                        </div>
+                        <pre><code>const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+  });
+});</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="step-card flex gap-4 mb-10 relative" data-aos="fade-up">
+                <div class="step-connector"></div>
+                <div class="shrink-0 w-12 h-12 rounded-xl bg-[#FAB516]/10 border border-[#FAB516]/30 flex items-center justify-center text-[#FAB516] font-bold text-[16px] step-num-box"
+                    style="font-family: bebas;">07</div>
+                <div class="flex-1 min-w-0">
+                    <h2 class="text-[22px] font-semibold mb-2" style="font-family: bebas;">OPTIMIZE EVERY IMAGE
+                        BEFORE IT GOES LIVE</h2>
+                    <p class="text-[15px] leading-[1.8]">
+                        Unoptimized images are the number one reason responsive sites still load slowly on mobile.
+                        Compress everything before upload, use <code>srcset</code> to serve smaller files to smaller
+                        screens, and add <code>loading="lazy"</code> to anything below the fold. We cover this in
+                        more depth in our
+                        <a href="/blog/seo-tips-rank-google-first-page" class="text-[#FAB516] underline hover:text-[#101120] transition-colors">SEO
+                            tips article</a>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 8 -->
+            <div class="step-card flex gap-4 mb-10 relative" data-aos="fade-up">
+                <div class="step-connector"></div>
+                <div class="shrink-0 w-12 h-12 rounded-xl bg-[#0073aa]/15 border border-[#0073aa]/35 flex items-center justify-center text-[#4db8e8] font-bold text-[16px] step-num-box step-num-box-blue"
+                    style="font-family: bebas;">08</div>
+                <div class="flex-1 min-w-0">
+                    <h2 class="text-[22px] font-semibold mb-2" style="font-family: bebas;">TEST ON REAL DEVICES, NOT
+                        JUST DEVTOOLS</h2>
+                    <p class="text-[15px] leading-[1.8]">
+                        Chrome DevTools' device mode (Ctrl+Shift+M) is a good first check, but it's a simulation.
+                        Before any project ships, we test on actual Android and iOS devices — touch targets that
+                        look fine in DevTools sometimes feel too small with a real thumb.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 9 -->
+            <div class="step-card flex gap-4 mb-10 relative" data-aos="fade-up">
+                <div class="shrink-0 w-12 h-12 rounded-xl bg-[#FAB516]/10 border border-[#FAB516]/30 flex items-center justify-center text-[#FAB516] font-bold text-[16px] step-num-box"
+                    style="font-family: bebas;">09</div>
+                <div class="flex-1 min-w-0">
+                   <h2 class="text-[22px] font-semibold mb-2" style="font-family: bebas;">DEPLOY YOUR RESPONSIVE WEBSITE AND TEST MOBILE FRIENDLINESS</h2>
+                    <p class="text-[15px] leading-[1.8]">
+                        Once your site is live, run it through Google's Mobile-Friendly Test and check Core Web
+                        Vitals in Search Console. A responsive site that also loads fast is what actually helps
+                        rankings — not just having media queries in your CSS. This same skill set is exactly what
+                        gets a freelance web developer their first paid gigs in Bahawalpur — clients notice fast,
+                        working mobile sites more than fancy design.
+                    </p>
+                </div>
+            </div>
+            <p class="text-[16px] leading-[1.8] mb-8">
+    A responsive website is only half the picture — once it's live, you'll also want it to actually rank on Google. Our <a href="/blog/seo-tips-rank-google-first-page" class="text-[#FAB516] underline hover:text-[#101120] transition-colors">SEO tips guide</a> covers exactly how to do that. And if WordPress is more your speed than hand-coding, check out our <a href="/wordpress-service" class="text-[#FAB516] underline hover:text-[#101120] transition-colors">WordPress development service</a> instead.
+</p>
+
+            <p class="text-[16px] leading-[1.8] mb-10">
+                That's the full process — viewport tag, fluid layout, Flexbox and Grid, sensible breakpoints, a
+                working mobile menu, optimized images, and real device testing. If you'd rather learn this hands-on
+                with real projects, our <a href="/web-development-course"
+                    class="text-[#FAB516] underline hover:text-[#101120] transition-colors">Web Development course in
+                    Bahawalpur</a> covers all of this step by step, or our <a href="/apply-for-project"
+                    class="text-[#FAB516] underline hover:text-[#101120] transition-colors">team can build your
+                    responsive website for you</a>.
+            </p>
+
+            <!-- FAQ Section -->
+            <section class="mt-16" data-aos="fade-up">
+
+                <h2 class="mb-8" style="font-family: bebas; font-size: clamp(28px, 4vw, 36px);">
+                    Frequently Asked Questions
+                </h2>
+
+                <div class="space-y-4">
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Do I need to know JavaScript to build a responsive website?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="text-[15px] leading-8 text-gray-700">
+                                No. A fully responsive layout can be built using only HTML and CSS with media
+                                queries, Flexbox and Grid. JavaScript is only needed for interactive elements like a
+                                mobile menu or smooth scrolling.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What is the difference between Flexbox and CSS Grid?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="text-[15px] leading-8 text-gray-700">
+                                Flexbox is best for arranging items in a single row or column, like a navbar or a row
+                                of cards. CSS Grid is better for two-dimensional layouts where you need control over
+                                both rows and columns at the same time, like a full page layout.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>How long does it take to build a responsive website from scratch?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="text-[15px] leading-8 text-gray-700">
+                                A simple one-page responsive website can be built in one to three days by a beginner.
+                                A complete multi-page business website usually takes one to three weeks depending on
+                                design complexity and features.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Does a responsive design actually improve SEO rankings?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="text-[15px] leading-8 text-gray-700">
+                                Yes. Google uses mobile-first indexing, which means it primarily evaluates the mobile
+                                version of a site for ranking. A responsive, fast-loading website performs
+                                significantly better in search results than a non-responsive one.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Why choose VartexSoft for web development in Bahawalpur?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="text-[15px] leading-8 text-gray-700">
+                                VartexSoft is a software house in Bahawalpur offering custom Website Development,
+                                SEO, Web Design and Digital Marketing services. We build fast, fully responsive
+                                websites using modern technologies and provide ongoing support after launch.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Author Box -->
+            <div class="flex items-start gap-4 bg-white border border-gray-200 rounded-2xl p-6 mb-10 mt-10" data-aos="fade-up">
+                <div
+                    class="w-12 h-12 rounded-full bg-[#FAB516]/10 border border-[#FAB516]/30 flex items-center justify-center shrink-0 author-ring">
+                    <i class="fa-solid fa-user text-[#FAB516] text-lg"></i>
+                </div>
+                <div>
+                    <p class="text-[14px] font-semibold">Written by Areeb Sarwar</p>
+                    <p class="text-[13px] text-gray-600">Areeb Sarwar is the founder and CEO of VartexSoft, a
+                        Software House in Bahawalpur. He works with businesses on Website Development, SEO, Web
+                        Design, and Digital Marketing strategies to improve their online visibility.</p>
+                </div>
+            </div>
+
+            <!-- CTA Box -->
+            <div class="cta-glow bg-[#1B1C2A] rounded-2xl p-8 md:p-10 text-center mt-6" data-aos="zoom-in">
+                <h3 class="text-white text-[24px] mb-3" style="font-family: bebas;">WANT A PROFESSIONAL RESPONSIVE
+                    WEBSITE?</h3>
+                <p class="text-white/70 text-[14px] mb-6 max-w-md mx-auto">Learn HTML, CSS, JavaScript and
+                    responsive design hands-on with VartexSoft's Web Development Course in Bahawalpur — or let our
+                    team build it for you.</p>
+                <a href="/web-development-course"
+                    class="inline-flex items-center gap-2 bg-[#FAB516] text-[#101120] px-7 py-3 rounded-xl text-[14px] font-bold hover:bg-[#FFD060] transition relative z-10">
+                    View Web Development Course <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <!-- Back to blog -->
+            <div class="mt-10">
+                <a href="/blog"
+                    class="text-[14px] text-[#101120] font-semibold hover:text-[#FAB516] transition-colors">
+                    <i class="fa-solid fa-arrow-left mr-2"></i>Back to all articles
+                </a>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#101120] text-white border-t border-white/10 pt-10 pb-5 px-[6%]">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-5">
+            <div>
+                <div class="flex items-center gap-3 mb-5">
+                    <a href="/"><img class="w-70 md:w-54 lg:w-54 h-auto"
+                            src="/images/vartex-Soft-final-logo-web.png"
+                            alt="VartexSoft - Software House in Bahawalpur" width="216"
+                            height="60" loading="lazy" decoding="async"> </a>
+                </div>
+                <p class="text-[14px] leading-[1.7] mb-3 font-light max-w-75">
+                    Based in Bahawalpur, Pakistan, we specialize in building modern digital solutions and empowering
+                    the next generation of developers.
+                </p>
+                <p class="text-[13px] leading-[1.7] mb-2 font-light max-w-75">
+                    <i class="fa-solid fa-location-dot text-[#FAB516] mr-2"></i>Rohaan Plaza, Faisal Colony Street 1,
+                    Women University Road, Bahawalpur
+                </p>
+                <p class="text-[13px] leading-[1.7] mb-6 font-light">
+                    <i class="fa-solid fa-phone text-[#FAB516] mr-2"></i><a href="tel:+923007806086"
+                        class="hover:text-[#FAB516] transition-colors">0300-7806086</a>
+                </p>
+                <div class="flex gap-1 text-white">
+                    <a href="https://www.tiktok.com/@vartexsoft?lang=en-GB" target="_blank" rel="noopener"
+                        class="w-10 h-10 border border-white/10 rounded-lg flex items-center justify-center transition-all duration-200 hover:border-[#FAB516] hover:bg-[#FAB516]/10 hover:-translate-y-0.5"><span><i
+                                class="fa-brands fa-tiktok"></i></span></a>
+                    <a href="https://www.facebook.com/profile.php?id=61586228192824" target="_blank" rel="noopener"
+                        class="w-10 h-10 border border-white/10 rounded-lg flex items-center justify-center transition-all duration-200 hover:border-[#FAB516] hover:bg-[#FAB516]/10 hover:-translate-y-0.5"><span><i
+                                class="fa-brands fa-facebook-f"></i></span></a>
+                    <a href="https://www.instagram.com/vartexsoft/" target="_blank" rel="noopener"
+                        class="w-10 h-10 border border-white/10 rounded-lg flex items-center justify-center transition-all duration-200 hover:border-[#FAB516] hover:bg-[#FAB516]/10 hover:-translate-y-0.5"><span><i
+                                class="fa-brands fa-instagram"></i></span></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-[18px] tracking-[0.025em] mb-2 text-[#FAB516]" style="font-family: bebas;">Quick
+                    Links
+                </h4>
+                <ul class="flex flex-col gap-0.5">
+                    <li><a href="/" class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Home</a></li>
+                    <li><a href="/about"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">About Us</a></li>
+                    <li><a href="/contact"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Contact Us</a></li>
+                    <li><a href="/courses"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Courses</a></li>
+                    <li><a href="/blog"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Blog</a></li>
+                    <li><a href="/services"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Services</a></li>
+                    <li><a href="/apply-for-project"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Apply For Project</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-[18px] tracking-[0.025em] mb-2 text-[#FAB516]" style="font-family: bebas;">Services
+                </h4>
+                <ul class="flex flex-col gap-0.5">
+                    <li><a href="/web-development-service"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Web Development</a>
+                    </li>
+                    <li><a href="/digital-marketing-service"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Digital
+                            Marketing</a>
+                    </li>
+                    <li><a href="/graphic-designing-service"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Graphic
+                            Designing</a>
+                    </li>
+                    <li><a href="/app-development-service"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">App Development</a>
+                    </li>
+                    <li><a href="/wordpress-service"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Wordpress</a></li>
+                </ul>
+            </div>
+
+            <div class="relative">
+                <h4 class="text-[18px] tracking-[0.025em] mb-2 text-[#FAB516]" style="font-family: bebas;">Courses
+                </h4>
+                <ul id="courseList" class="overflow-hidden max-h-25 transition-all duration-300 flex flex-col gap-0.5">
+                    <li><a href="/web-development-course"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Web Development</a>
+                    </li>
+                    <li><a href="/digital-marketing-course"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Digital
+                            Marketing</a>
+                    </li>
+                    <li><a href="/graphic-designing-course"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Graphic Designing</a></li>
+                    <li><a href="/app-development-course"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">App Development</a></li>
+                    <li><a href="/wordpress-course"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Wordpress</a></li>
+                    <li><a href="/shopify-services"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Shopify</a></li>
+                    <li><a href="/seo-services"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">SEO</a></li>
+                    <li><a href="/tiktok-monetization"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">Tiktok
+                            Monitization</a></li>
+                    <li><a href="/youtube-automation"
+                            class="text-[14px] font-light transition-colors hover:text-[#FAB516]">YouTube
+                            Automation</a>
+                    </li>
+                </ul>
+                <button id="toggleCourses" class="mt-2 text-yellow-400 font-semibold hover:underline">More</button>
+            </div>
+        </div>
+
+        <div
+            class="pt-4 border-t border-white flex flex-wrap justify-center md:justify-between lg:justify-between items-center">
+            <p class="text-[13px] text-center mb-2 md:mb-0 lg:mb-0 font-light">
+                © 2026 <a href="/" class="text-[#FAB516]">Vartex Soft</a>. All rights reserved. Think
+                Higher.
+                Build Smarter.
+            </p>
+            <p class="text-[13px] font-light">Privacy Policy · Terms of Service · Cookie Policy</p>
+            <p class="text-[12px] text-white/40 text-center w-full mt-2 font-light">
+                Rohaan Plaza, Faisal Colony Street 1, Women University Road, Bahawalpur, Punjab, Pakistan ·
+                <a href="tel:+923007806086" class="hover:text-[#FAB516] transition-colors">+92 300 780 6086</a> ·
+                CEO: Areeb Sarwar
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
+
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        function toggleFAQ(btn) {
+            const item = btn.closest(".faq-item");
+            const isActive = item.classList.contains("active");
+            document.querySelectorAll(".faq-item.active").forEach((el) => {
+                el.classList.remove("active");
+                el.querySelector(".faq-icon i").classList.remove("fa-minus");
+                el.querySelector(".faq-icon i").classList.add("fa-plus");
+            });
+            if (!isActive) {
+                item.classList.add("active");
+                btn.querySelector(".faq-icon i").classList.remove("fa-plus");
+                btn.querySelector(".faq-icon i").classList.add("fa-minus");
+            }
+        }
+
+        const navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add("shadow-2xl");
+            } else {
+                navbar.classList.remove("shadow-2xl");
+            }
+        });
+
+        //footer courses toggle
+        const toggleBtn = document.getElementById('toggleCourses');
+        const courseList = document.getElementById('courseList');
+        let expanded = false;
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                if (!expanded) {
+                    courseList.style.maxHeight = courseList.scrollHeight + "px";
+                    toggleBtn.textContent = "Less";
+                } else {
+                    courseList.style.maxHeight = "6rem";
+                    toggleBtn.textContent = "More";
+                }
+                expanded = !expanded;
+            });
+        }
+    </script>
+</body>
+
+</html>

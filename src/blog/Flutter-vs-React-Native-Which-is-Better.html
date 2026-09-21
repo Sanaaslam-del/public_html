@@ -1,0 +1,900 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <title>Flutter vs React Native: Which is Better in 2026? | VartexSoft</title>
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1028812633079142');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1028812633079142&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+    <meta name="description" content="Flutter vs React Native — a practical comparison for developers and businesses in Pakistan. Performance, UI, learning curve, jobs and which one VartexSoft recommends.">
+    <meta name="keywords" content="Flutter vs React Native, mobile app development Pakistan, Flutter Bahawalpur, React Native Bahawalpur, freelance app developer Bahawalpur, cross platform app development, VartexSoft blog, Areeb Sarwar">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="Areeb Sarwar">
+    <link rel="canonical" href="https://vartexsoft.com/blog/flutter-vs-react-native">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Flutter vs React Native: Which is Better in 2026?">
+    <meta property="og:description" content="A practical Flutter vs React Native comparison from VartexSoft's app development team in Bahawalpur — performance, UI, jobs and which one to pick.">
+    <meta property="og:image" content="https://vartexsoft.com/images/flutter.png">
+    <meta property="og:url" content="https://vartexsoft.com/blog/flutter-vs-react-native">
+    <meta property="og:locale" content="en_PK">
+    <meta property="article:author" content="Areeb Sarwar">
+    <meta property="article:published_time" content="2026-07-01">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Flutter vs React Native: Which is Better in 2026?">
+    <meta name="twitter:description" content="Flutter vs React Native — practical comparison from VartexSoft Bahawalpur.">
+    <meta name="twitter:image" content="https://vartexsoft.com/images/flutter.png">
+
+   <link rel="icon" href="/images/favicon-48.png" type="image/png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon-180.png">
+
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <!-- Hero image preload -->
+    <link rel="preload" as="image" href="/images/flutter.png" fetchpriority="high">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --vx-navy: #101120;
+            --vx-navy-2: #1B1C2A;
+            --vx-gold: #FAB516;
+            --vx-gold-light: #FFD060;
+            --vx-blue: #0073aa;
+            --vx-blue-light: #4db8e8;
+        }
+        * { scroll-behavior: smooth; }
+        body { -webkit-font-smoothing: antialiased; }
+        ::selection { background: var(--vx-gold); color: var(--vx-navy); }
+        ::-webkit-scrollbar { width: 9px; }
+        ::-webkit-scrollbar-track { background: var(--vx-navy); }
+        ::-webkit-scrollbar-thumb { background: var(--vx-gold); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--vx-gold-light); }
+
+        .tip-box {
+            background: linear-gradient(135deg, rgba(250,181,22,0.07) 0%, rgba(250,181,22,0.03) 100%);
+            border-left: 3px solid var(--vx-gold);
+            border-radius: 0 10px 10px 0;
+            padding: 14px 18px;
+            margin: 16px 0;
+        }
+        .tip-box p { margin: 0; font-size: 14px; color: #374151; line-height: 1.7; }
+        .tip-box strong { color: var(--vx-navy); }
+
+        .step-card { transition: transform 0.3s ease; position: relative; }
+        .step-card:hover { transform: translateX(4px); }
+        .step-num-box {
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 14px -4px rgba(250,181,22,0.3);
+        }
+        .step-card:hover .step-num-box { transform: scale(1.08) rotate(-3deg); }
+        .step-num-box-blue { box-shadow: 0 4px 14px -4px rgba(0,115,170,0.3); }
+        .step-connector {
+            position: absolute;
+            left: 24px;
+            top: 56px;
+            bottom: -32px;
+            width: 2px;
+            background: linear-gradient(180deg, rgba(250,181,22,0.3), rgba(250,181,22,0));
+        }
+
+        .check-list { list-style: none; padding: 0; margin: 12px 0; }
+        .check-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14.5px;
+            color: #374151;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+        .check-list li::before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: rgba(250,181,22,0.15);
+            border: 1.5px solid var(--vx-gold);
+            flex-shrink: 0;
+            margin-top: 3px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%23FAB516' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* Comparison table */
+        .compare-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .compare-table th {
+            padding: 12px 16px;
+            text-align: left;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .compare-table th:first-child { color: #374151; background: #f9fafb; }
+        .compare-table th.flutter-col { background: rgba(250,181,22,0.08); color: #92400e; border-bottom: 2px solid #FAB516; }
+        .compare-table th.rn-col { background: rgba(0,115,170,0.08); color: #1e40af; border-bottom: 2px solid #0073aa; }
+        .compare-table td {
+            padding: 11px 16px;
+            font-size: 13.5px;
+            color: #374151;
+            border-bottom: 1px solid #f0f0f0;
+            vertical-align: top;
+            line-height: 1.6;
+        }
+        .compare-table tr:last-child td { border-bottom: none; }
+        .compare-table td:first-child { font-weight: 600; color: #101120; background: #fafafa; }
+        .compare-table td.flutter-col { background: rgba(250,181,22,0.03); }
+        .compare-table td.rn-col { background: rgba(0,115,170,0.03); }
+        .badge-win {
+            display: inline-block;
+            background: rgba(250,181,22,0.15);
+            color: #92400e;
+            border: 1px solid rgba(250,181,22,0.4);
+            border-radius: 20px;
+            padding: 2px 8px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-left: 6px;
+        }
+
+        .stat-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 20px;
+            text-align: center;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+        }
+        .stat-card:hover {
+            border-color: rgba(250,181,22,0.5);
+            box-shadow: 0 6px 20px -8px rgba(250,181,22,0.25);
+            transform: translateY(-3px);
+        }
+        .stat-number { font-family: 'Bebas Neue', sans-serif; font-size: 38px; color: var(--vx-gold); line-height: 1; margin-bottom: 6px; }
+        .stat-label { font-size: 12.5px; color: #6b7280; font-weight: 500; line-height: 1.4; }
+
+        .faq-item {
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #ffffff;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+        .faq-item:hover {
+            border-color: rgba(250,181,22,0.5);
+            box-shadow: 0 6px 20px -8px rgba(250,181,22,0.25);
+        }
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            color: #101120;
+        }
+        .faq-icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(250,181,22,0.12);
+            border: 1px solid rgba(250,181,22,0.3);
+            color: var(--vx-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .faq-item.active .faq-icon { transform: rotate(45deg); background: var(--vx-gold); color: var(--vx-navy); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; padding: 0 20px; }
+        .faq-item.active .faq-answer { max-height: 300px; padding: 0 20px 20px; }
+
+        .hero-img-wrap img { transition: transform 8s ease; }
+        .hero-img-wrap:hover img { transform: scale(1.08); }
+        .pill-tag span { animation: pulse-dot 2s infinite; }
+        @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+        .cta-glow { position: relative; overflow: hidden; }
+        .cta-glow::before {
+            content: "";
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(250,181,22,0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .author-ring { box-shadow: 0 0 0 3px rgba(250,181,22,0.15); }
+        #navbar { transition: box-shadow 0.3s ease; }
+        footer a[target="_blank"]:hover { box-shadow: 0 4px 14px -4px rgba(250,181,22,0.4); }
+        @media (max-width: 768px) { .step-connector { display: none; } .compare-table { font-size: 12px; } .compare-table td, .compare-table th { padding: 8px 10px; } }
+    </style>
+
+    <!-- BlogPosting Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Flutter vs React Native: Which is Better in 2026?",
+      "description": "A practical Flutter vs React Native comparison for developers and businesses — performance, UI, learning curve, job market and which one to choose for your next mobile app.",
+      "image": "https://vartexsoft.com/images/flutter.png",
+      "datePublished": "2026-07-01",
+      "dateModified": "2026-07-01",
+      "wordCount": "1700",
+      "timeRequired": "PT7M",
+      "author": {
+        "@type": "Person",
+        "name": "Areeb Sarwar",
+        "jobTitle": "CEO",
+        "worksFor": { "@type": "Organization", "name": "VartexSoft" }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "VartexSoft",
+        "logo": { "@type": "ImageObject", "url": "https://vartexsoft.com/images/vartex-Soft-final-logo-web.png" }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://vartexsoft.com/blog/flutter-vs-react-native"
+      }
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://vartexsoft.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://vartexsoft.com/blog"},
+        {"@type": "ListItem", "position": 3, "name": "Flutter vs React Native: Which is Better in 2026?", "item": "https://vartexsoft.com/blog/flutter-vs-react-native"}
+      ]
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "VartexSoft",
+      "url": "https://vartexsoft.com",
+      "logo": "https://vartexsoft.com/images/vartex-Soft-final-logo-web.png",
+      "founder": { "@type": "Person", "name": "Areeb Sarwar" },
+      "telephone": "+92-300-7806086",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rohaan Plaza, Faisal Colony Street 1, Women University Road",
+        "addressLocality": "Bahawalpur",
+        "addressRegion": "Punjab",
+        "addressCountry": "PK"
+      }
+    }
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which is faster — Flutter or React Native?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Flutter is generally faster because it uses its own rendering engine (Skia/Impeller) and does not rely on a JavaScript bridge. React Native has improved with the new architecture but Flutter still has a slight performance edge for animation-heavy apps." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Flutter or React Native better for beginners?",
+          "acceptedAnswer": { "@type": "Answer", "text": "React Native is easier to start if you already know JavaScript or React. Flutter uses Dart which is a new language for most people, but Dart itself is simple to learn and Flutter's documentation is excellent." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which has more job opportunities in Pakistan — Flutter or React Native?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Both are in demand. React Native has been around longer so there are more legacy projects, but Flutter job postings are growing fast especially for startups and new projects. Learning either gives you good job prospects in Pakistan." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can VartexSoft build apps in both Flutter and React Native?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. VartexSoft builds mobile apps using both Flutter and React Native depending on the project requirements. We recommend the right framework based on your target audience, timeline, and budget." }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I learn Flutter or React Native in 2026?",
+          "acceptedAnswer": { "@type": "Answer", "text": "If you are starting fresh, Flutter is the stronger choice in 2026 — better performance, consistent UI across platforms, and growing demand. If you already know JavaScript and React, React Native is a faster path to your first app." }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body class="bg-[#101120]" style="font-family: outfit;">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 flex items-center justify-between px-6 py-4 bg-gray-50 border-b border-white/5 transition-all duration-300 shadow-xl">
+        <a href="../../index.html"><img class="w-auto h-10" src="/images/logo2.png" alt="VartexSoft logo" width="160" height="40" loading="eager"></a>
+        <ul class="hidden lg:flex items-center gap-8 font-medium">
+            <li><a href="../../index.html" class="relative group" style="font-family: bebas;">Home</a></li>
+            <li><a href="../services.html" class="relative group" style="font-family: bebas;">Services</a></li>
+            <li><a href="../courses.html" class="relative group" style="font-family: bebas;">Courses</a></li>
+            <li><a href="../blog.html" class="relative group" style="font-family: bebas;">Blog</a></li>
+            <li><a href="../aboutUs.html" class="relative group" style="font-family: bebas;">About Us</a></li>
+            <li><a href="../contactUs.html" class="relative group" style="font-family: bebas;">Contact Us</a></li>
+            <li><a href="../applyForProject.html" class="bg-[#FAB516] text-white px-4 py-2 rounded-md font-bold text-[13px]" style="font-family: bebas;">Get Started <i class="fa-solid fa-arrow-right"></i></a></li>
+        </ul>
+        <button id="menuBtn" class="lg:hidden text-2xl text-black" aria-label="Open navigation menu"><i class="fa-solid fa-bars"></i></button>
+        <div id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-[#1B1C2A]">
+            <div class="flex flex-col px-4 py-4 gap-4 font-medium text-white">
+                <a href="../../index.html" style="font-family: bebas;">Home</a>
+                <a href="../services.html" style="font-family: bebas;">Services</a>
+                <a href="../courses.html" style="font-family: bebas;">Courses</a>
+                <a href="../blog.html" style="font-family: bebas;">Blog</a>
+                <a href="../aboutUs.html" style="font-family: bebas;">About Us</a>
+                <a href="../contactUs.html" style="font-family: bebas;">Contact Us</a>
+                <a href="../applyForProject.html" style="font-family: bebas;" class="bg-[#FAB516] text-black text-center px-5 py-2 rounded-full">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="pt-24 pb-2 px-6 md:px-[6%] bg-[#1B1C2A] text-white text-sm" aria-label="Breadcrumb">
+        <ol class="flex items-center space-x-2 flex-wrap">
+            <li><a href="/" class="hover:text-[#FAB516] transition-colors">Home</a><span class="mx-2 text-white/50">/</span></li>
+            <li><a href="/blog" class="hover:text-[#FAB516] transition-colors">Blog</a><span class="mx-2 text-white/50">/</span></li>
+            <li class="text-[#FAB516] font-semibold" aria-current="page">Flutter vs React Native: Which is Better?</li>
+        </ol>
+    </nav>
+
+    <!-- Article Header -->
+   <!-- Article Header -->
+<header class="relative px-6 md:px-[6%] py-16 md:py-20 overflow-hidden" style="background: linear-gradient(135deg, #101120 0%, #1B1C2A 55%, #142a35 100%);">
+    <!-- Decorative background pattern -->
+    <div class="absolute inset-0 opacity-[0.07] pointer-events-none" style="background-image: radial-gradient(circle at 20% 30%, #FAB516 0px, transparent 2px), radial-gradient(circle at 80% 70%, #4db8e8 0px, transparent 2px), radial-gradient(circle at 50% 50%, #FAB516 0px, transparent 1px); background-size: 60px 60px, 80px 80px, 40px 40px;"></div>
+    <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full blur-3xl opacity-20 pointer-events-none" style="background: radial-gradient(circle, #FAB516 0%, transparent 70%);"></div>
+    <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full blur-3xl opacity-20 pointer-events-none" style="background: radial-gradient(circle, #0073aa 0%, transparent 70%);"></div>
+
+    <div class="relative z-10 max-w-3xl mx-auto text-center" data-aos="fade-up">
+
+        <div class="pill-tag inline-flex items-center gap-2 bg-[#FAB516]/10 border border-[#FAB516]/30 text-[#FAB516] px-4 py-2 rounded-full text-[11px] font-semibold uppercase tracking-wide mb-6">
+            <span class="w-1.5 h-1.5 bg-[#FAB516] rounded-full inline-block"></span> App Development
+        </div>
+
+        <!-- Framework icon badges -->
+        <div class="flex items-center justify-center gap-4 mb-6">
+            <div class="w-14 h-14 rounded-2xl bg-[#FAB516]/10 border border-[#FAB516]/30 flex items-center justify-center">
+                <i class="fa-solid fa-bolt text-[#FAB516] text-xl"></i>
+            </div>
+            <span class="text-white/40 text-[13px] font-light" style="font-family: bebas; letter-spacing: 0.1em;">VS</span>
+            <div class="w-14 h-14 rounded-2xl bg-[#0073aa]/15 border border-[#0073aa]/35 flex items-center justify-center">
+                <i class="fa-brands fa-react text-[#4db8e8] text-xl"></i>
+            </div>
+        </div>
+
+        <h1 class="text-white mb-5" style="font-family: bebas; font-size: clamp(32px, 6vw, 56px); line-height: 1.08; letter-spacing: 0.01em;">
+            Flutter vs React Native: <span class="text-[#FAB516]">Which is Better</span> in 2026?
+        </h1>
+
+        <p class="text-white/70 text-[16px] leading-[1.7] max-w-xl mx-auto mb-8 font-light">
+            A practical, no-fluff comparison for developers and businesses in Pakistan — performance, UI, learning curve, and which one VartexSoft actually recommends.
+        </p>
+
+        <div class="flex items-center justify-center text-white/60 gap-4 text-[13px] flex-wrap">
+            <span><i class="fa-regular fa-calendar text-[#FAB516] mr-1.5"></i>July 1, 2026</span>
+            <span><i class="fa-regular fa-clock text-[#FAB516] mr-1.5"></i>7 min read</span>
+            <span><i class="fa-solid fa-user text-[#FAB516] mr-1.5"></i>By Areeb Sarwar, CEO of VartexSoft</span>
+        </div>
+    </div>
+</header>
+
+    <!-- Article Body -->
+    <article class="px-6 md:px-[6%] pb-16 bg-gray-50 text-[#2b2f3a]" itemscope itemtype="https://schema.org/Article">
+        <div class="max-w-3xl mx-auto pt-10" data-aos="fade-up" data-aos-duration="800">
+
+            <p class="text-[16px] leading-[1.8] mb-5">
+                If you're planning to build a mobile app — or you're a developer deciding what to learn next — Flutter and React Native are the two names that keep coming up. Both let you build apps for Android and iOS from a single codebase. Both are used by big companies. Both have active communities. So which one should you actually pick?
+            </p>
+            <p class="text-[16px] leading-[1.8] mb-10">
+    At <strong>VartexSoft</strong>, a <strong>Software House in Bahawalpur</strong>, our team has built mobile apps in both Flutter and React Native for clients across Pakistan. This isn't a theoretical comparison — it's based on real <strong>App Development projects in Bahawalpur</strong> and what we've seen work in the Pakistani market for startups and businesses alike.
+</p>
+
+            <!-- Stats row -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12" data-aos="fade-up">
+                <div class="stat-card">
+                    <div class="stat-number">2017</div>
+                    <div class="stat-label">Flutter first released by Google</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2015</div>
+                    <div class="stat-label">React Native first released by Facebook</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3M+</div>
+                    <div class="stat-label">apps built with Flutter worldwide</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">#1</div>
+                    <div class="stat-label">Flutter ranked most used cross-platform framework in 2024</div>
+                </div>
+            </div>
+
+            <!-- Quick comparison table -->
+            <div class="mb-10" data-aos="fade-up">
+                <h2 class="mb-4" style="font-family: bebas; font-size: clamp(24px, 3vw, 30px);">AT A GLANCE — SIDE BY SIDE</h2>
+                <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th style="width:30%"> </th>
+                                <th class="flutter-col">Flutter</th>
+                                <th class="rn-col">React Native</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Language</td>
+                                <td class="flutter-col">Dart <span class="badge-win">Google</span></td>
+                                <td class="rn-col">JavaScript / TypeScript</td>
+                            </tr>
+                            <tr>
+                                <td>Performance</td>
+                                <td class="flutter-col">Excellent — own render engine <span class="badge-win">Winner</span></td>
+                                <td class="rn-col">Good — improved with new arch</td>
+                            </tr>
+                            <tr>
+                                <td>UI Consistency</td>
+                                <td class="flutter-col">Pixel-perfect on all platforms <span class="badge-win">Winner</span></td>
+                                <td class="rn-col">Uses native components</td>
+                            </tr>
+                            <tr>
+                                <td>Learning Curve</td>
+                                <td class="flutter-col">Medium — new language (Dart)</td>
+                                <td class="rn-col">Lower for JS developers <span class="badge-win">Winner</span></td>
+                            </tr>
+                            <tr>
+                                <td>Community</td>
+                                <td class="flutter-col">Growing fast</td>
+                                <td class="rn-col">Larger, older ecosystem <span class="badge-win">Winner</span></td>
+                            </tr>
+                            <tr>
+                                <td>Job Market PK</td>
+                                <td class="flutter-col">Growing fast</td>
+                                <td class="rn-col">More legacy projects</td>
+                            </tr>
+                            <tr>
+                                <td>Hot Reload</td>
+                                <td class="flutter-col">Yes — very fast</td>
+                                <td class="rn-col">Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Web + Desktop</td>
+                                <td class="flutter-col">Yes — all platforms <span class="badge-win">Winner</span></td>
+                                <td class="rn-col">Mobile focused</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Point 1 -->
+            <div class="step-card flex gap-4 mb-10 relative" data-aos="fade-up">
+                <div class="step-connector"></div>
+                <div class="shrink-0 w-12 h-12 rounded-xl bg-[#FAB516]/10 border border-[#FAB516]/30 flex items-center justify-center text-[#FAB516] font-bold text-[16px] step-num-box" style="font-family: bebas;">01</div>
+                <div class="flex-1">
+                    <h2 class="text-[22px] font-semibold mb-2" style="font-family: bebas;">PERFORMANCE — FLUTTER WINS, BUT NOT BY MUCH ANYMORE</h2>
+                    <p class="text-[15px] leading-[1.8] mb-3">
+                        Flutter has its own rendering engine (Skia, now Impeller) — it draws every pixel itself instead of relying on native components. This means animations are smoother and performance is more consistent across Android and iOS.
+                    </p>
+                    <p class="text-[15px] leading-[1.8] mb-3">
+                        React Native used to struggle here because it communicated between JavaScript and native code through a "bridge" that caused slowdowns. The new React Native architecture (JSI) has fixed most of this. For most business apps — booking systems, e-commerce, dashboards — you won't notice a real difference.
+                    </p>
+                    <div class="tip-box">
+                        <p><strong>When it matters:</strong> If your app has heavy animations, complex transitions, or real-time graphics, go Flutter. For data-driven apps like order management or delivery tracking, either works perfectly fine.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Point 2 -->
+            <div class="step-card flex gap-4 mb-10 relative" data-aos="fade-up">
+                <div class="step-connector"></div>
+                <div class="shrink-0 w-12 h-12 rounded-xl bg-[#0073aa]/15 border border-[#0073aa]/35 flex items-center justify-center text-[#4db8e8] font-bold text-[16px] step-num-box step-num-box-blue" style="font-family: bebas;">02</div>
+                <div class="flex-1">
+                    <h2 class="text-[22px] font-semibold mb-2" style="font-family: bebas;">LEARNING CURVE — REACT NATIVE IS EASIER IF YOU KNOW JS</h2>
+                    <p class="text-[15px] leading-[1.8] mb-3">
+                        If you already know JavaScript or have worked with React for web, React Native will feel familiar within a week. The component model, state management, and overall structure translate directly.
+                    </p>
+                    <p class="text-[15px] leading-[1.8] mb-3">
+                        Flutter uses Dart — a language most developers haven't touched before. The good news is Dart is clean, simple, and easy to pick up. Most people are productive in Flutter within two to three weeks. The bigger adjustment is thinking in "widgets" rather than HTML/CSS, which takes a bit of getting used to.
+                    </p>
+                    <div class="tip-box">
+                        <p><strong>Our experience:</strong> Developers on our team who came from React picked up React Native faster. Those who came from other languages (Java, C#, Python) actually preferred Flutter — Dart felt cleaner to them.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Point 3 -->
+            <div class="step-card flex gap-4 mb-10 relative" data-aos="fade-up">
+                <div class="step-connector"></div>
+                <div class="shrink-0 w-12 h-12 rounded-xl bg-[#FAB516]/10 border border-[#FAB516]/30 flex items-center justify-center text-[#FAB516] font-bold text-[16px] step-num-box" style="font-family: bebas;">03</div>
+                <div class="flex-1">
+                    <h2 class="text-[22px] font-semibold mb-2" style="font-family: bebas;">UI AND DESIGN — FLUTTER GIVES YOU MORE CONTROL</h2>
+                    <p class="text-[15px] leading-[1.8] mb-3">
+                        React Native uses the actual native UI components of the phone — so a button on Android looks like an Android button, and on iOS it looks like an iOS button. This sounds like a good thing, but it means your UI can look slightly different on different devices.
+                    </p>
+                    <p class="text-[15px] leading-[1.8] mb-3">
+                        Flutter draws everything itself, so your app looks exactly the same on every device and every screen size. If a client wants a very specific visual design that has to look identical on Android and iPhone, Flutter is the safer choice.
+                    </p>
+                    <ul class="check-list mt-3">
+                        <li>Flutter: pixel-perfect consistency on all devices</li>
+                        <li>React Native: looks native to each platform automatically</li>
+                        <li>Custom designs and branded apps — Flutter wins</li>
+                        <li>Familiar platform feel for users — React Native wins</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Point 4 -->
+            <div class="step-card flex gap-4 mb-10 relative" data-aos="fade-up">
+                <div class="step-connector"></div>
+                <div class="shrink-0 w-12 h-12 rounded-xl bg-[#0073aa]/15 border border-[#0073aa]/35 flex items-center justify-center text-[#4db8e8] font-bold text-[16px] step-num-box step-num-box-blue" style="font-family: bebas;">04</div>
+                <div class="flex-1">
+                    <h2 class="text-[22px] font-semibold mb-2" style="font-family: bebas;">COMMUNITY AND PACKAGES — REACT NATIVE STILL AHEAD</h2>
+                    <p class="text-[15px] leading-[1.8] mb-3">
+                        React Native has been around since 2015, so the community is larger and there are more third-party packages available. If you need a specific payment gateway integration, a mapping library, or an obscure hardware feature — chances are someone has already built a React Native package for it.
+                    </p>
+                    <p class="text-[15px] leading-[1.8] mb-3">
+                        Flutter's pub.dev package repository has grown dramatically and covers most common needs now. For standard apps — login, API calls, maps, push notifications, payments — Flutter has solid packages. You'll only notice the gap in very specialized integrations.
+                    </p>
+                    <div class="tip-box">
+                        <p><strong>Real talk:</strong> For 90% of the mobile apps built in Pakistan — food delivery, booking apps, e-commerce, service marketplaces — both frameworks have everything you need. The package gap matters mainly for enterprise or hardware-specific projects.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Point 5 -->
+            <div class="step-card flex gap-4 mb-10 relative" data-aos="fade-up">
+                <div class="step-connector"></div>
+                <div class="shrink-0 w-12 h-12 rounded-xl bg-[#FAB516]/10 border border-[#FAB516]/30 flex items-center justify-center text-[#FAB516] font-bold text-[16px] step-num-box" style="font-family: bebas;">05</div>
+                <div class="flex-1">
+                    <h2 class="text-[22px] font-semibold mb-2" style="font-family: bebas;">JOBS AND FREELANCING IN PAKISTAN — BOTH ARE IN DEMAND</h2>
+                    <p class="text-[15px] leading-[1.8] mb-3">
+                        If you search on Rozee.pk or Fiverr Pakistan, you'll find job listings and gigs for both frameworks. React Native has more legacy projects (companies that started their apps years ago), so if you want to get hired quickly at an existing company, React Native may have more immediate openings.
+                    </p>
+                    <p class="text-[15px] leading-[1.8] mb-3">
+                        For new projects and startups, Flutter is increasingly the first choice — it's faster to develop in, the codebase is cleaner, and you get web and desktop support from the same code. On freelancing platforms like Fiverr and Upwork, Flutter gigs are growing faster than React Native right now. A lot of freelance app developers in Bahawalpur are picking up Flutter for exactly this reason — it opens up new-project work that React Native jobs don't always offer.
+                    </p>
+                    <ul class="check-list mt-3">
+                        <li>React Native — more existing jobs in established companies</li>
+                        <li>Flutter — more new project work and startup opportunities</li>
+                        <li>Fiverr/Upwork — Flutter demand growing faster in 2025-26</li>
+                        <li>Both frameworks are valued skills — learning one makes the other easier</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Point 6 -->
+            <div class="step-card flex gap-4 mb-10 relative" data-aos="fade-up">
+                <div class="step-connector"></div>
+                <div class="shrink-0 w-12 h-12 rounded-xl bg-[#0073aa]/15 border border-[#0073aa]/35 flex items-center justify-center text-[#4db8e8] font-bold text-[16px] step-num-box step-num-box-blue" style="font-family: bebas;">06</div>
+                <div class="flex-1">
+                    <h2 class="text-[22px] font-semibold mb-2" style="font-family: bebas;">WHICH ONE SHOULD YOU ACTUALLY CHOOSE?</h2>
+                    <p class="text-[15px] leading-[1.8] mb-3">
+                        There's no universal right answer — it depends on where you're coming from and what you're building. Here's how we think about it at VartexSoft when a client comes to us with an app idea.
+                    </p>
+                    <ul class="check-list mt-3">
+                        <li>You already know JavaScript or React → start with React Native</li>
+                        <li>You're starting fresh with no prior framework → learn Flutter</li>
+                        <li>Your app needs heavy animations or a very specific visual design → Flutter</li>
+                        <li>You need to ship fast and your team knows JS → React Native</li>
+                        <li>You want one codebase for mobile AND web AND desktop → Flutter</li>
+                        <li>Client needs maximum native look and feel → React Native</li>
+                    </ul>
+                    <div class="tip-box">
+                        <p><strong>VartexSoft's default in 2026:</strong> For new projects where the client has no existing codebase, we usually recommend Flutter — cleaner code, better performance, and the ability to expand to web later without starting over.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-[16px] leading-[1.8] mb-10">
+                At the end of the day, both Flutter and React Native are excellent frameworks used by companies like Google, Microsoft, Alibaba, Shopify, and Facebook. The "best" one is the one your team can actually ship a product with. If you want our team to build your app — and you don't want to worry about which framework is right — our <a href="/app-development-service" class="text-[#FAB516] underline hover:text-[#101120] transition-colors">App Development service in Bahawalpur</a> handles that decision for you. Or if you want to learn either yourself, check out our <a href="/app-development-course" class="text-[#FAB516] underline hover:text-[#101120] transition-colors">App Development course</a>.
+            </p>
+
+            <!-- FAQ Section -->
+            <section class="mt-16" data-aos="fade-up">
+                <h2 class="mb-8" style="font-family: bebas; font-size: clamp(28px, 4vw, 36px);">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Which is faster — Flutter or React Native?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="text-[15px] leading-8 text-gray-700">Flutter is generally faster because it uses its own rendering engine and does not rely on a JavaScript bridge. React Native has improved significantly with its new architecture but Flutter still has a slight edge for animation-heavy apps.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Is Flutter or React Native better for beginners?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="text-[15px] leading-8 text-gray-700">React Native is easier to start if you already know JavaScript or React. Flutter uses Dart which is a new language for most people, but Dart itself is simple and Flutter's documentation is excellent — most beginners are productive within two to three weeks.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Which has more job opportunities in Pakistan — Flutter or React Native?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="text-[15px] leading-8 text-gray-700">Both are in demand. React Native has more legacy project jobs at established companies, while Flutter is growing faster for new projects and startups. Learning either gives you strong job prospects in Pakistan.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Can VartexSoft build apps in both Flutter and React Native?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="text-[15px] leading-8 text-gray-700">Yes. VartexSoft builds mobile apps using both frameworks depending on project requirements. We recommend the right framework based on your target audience, timeline, and budget.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Should I learn Flutter or React Native in 2026?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="text-[15px] leading-8 text-gray-700">If you are starting fresh, Flutter is the stronger choice in 2026 — better performance, consistent UI, and growing demand. If you already know JavaScript and React, React Native is a faster path to your first app.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Author Box -->
+            <div class="flex items-start gap-4 bg-white border border-gray-200 rounded-2xl p-6 mb-10 mt-10" data-aos="fade-up">
+                <div class="w-12 h-12 rounded-full bg-[#FAB516]/10 border border-[#FAB516]/30 flex items-center justify-center shrink-0 author-ring">
+                    <i class="fa-solid fa-user text-[#FAB516] text-lg"></i>
+                </div>
+                <div>
+                    <p class="text-[14px] font-semibold">Written by Areeb Sarwar</p>
+                    <p class="text-[13px] text-gray-600">Areeb Sarwar is the founder and CEO of VartexSoft, a Software House in Bahawalpur. He leads the app development team and has overseen Flutter and React Native projects for clients across Pakistan.</p>
+                </div>
+            </div>
+
+            <!-- CTA Box -->
+            <div class="cta-glow bg-[#1B1C2A] rounded-2xl p-8 md:p-10 text-center mt-6" data-aos="zoom-in">
+                <h3 class="text-white text-[24px] mb-3" style="font-family: bebas;">WANT TO BUILD A MOBILE APP?</h3>
+                <p class="text-white/70 text-[14px] mb-6 max-w-md mx-auto">Let VartexSoft build your Android and iOS app — we'll recommend the right framework based on your goals and budget. Or learn app development yourself with our hands-on course in Bahawalpur.</p>
+                <div class="flex flex-wrap gap-3 justify-center">
+                    <a href="/apply-for-project" class="inline-flex items-center gap-2 bg-[#FAB516] text-[#101120] px-7 py-3 rounded-xl text-[14px] font-bold hover:bg-[#FFD060] transition relative z-10">
+                        Get a Free Quote <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="/app-development-course" class="inline-flex items-center gap-2 bg-transparent border border-white/20 text-white px-7 py-3 rounded-xl text-[14px] font-bold hover:border-[#FAB516] hover:text-[#FAB516] transition relative z-10">
+                        View Course
+                    </a>
+                </div>
+            </div>
+
+            <!-- Back to blog -->
+            <div class="mt-10">
+                <a href="/blog" class="text-[14px] text-[#101120] font-semibold hover:text-[#FAB516] transition-colors">
+                    <i class="fa-solid fa-arrow-left mr-2"></i>Back to all articles
+                </a>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#101120] text-white border-t border-white/10 pt-12 pb-6 px-[6%]">
+
+        <!-- CTA Strip -->
+        <div class="bg-[#1a1b2e] border border-white/10 rounded-2xl px-6 py-5 mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+                <p class="text-white font-semibold text-[15px] mb-0.5">Ready to build your mobile app?</p>
+                <p class="text-white/50 text-[13px] font-light">Flutter or React Native — we build it right, on time.</p>
+            </div>
+            <a href="/apply-for-project" class="inline-flex items-center gap-2 bg-[#FAB516] hover:bg-[#FFD060] transition-all duration-200 text-[#101120] px-5 py-2.5 rounded-lg text-[13px] font-bold shrink-0" style="font-family: bebas;">
+                Get Started <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            </a>
+        </div>
+
+        <!-- Contact info bar -->
+        <div class="flex flex-wrap gap-3 pb-8 border-b border-white/10 mb-8">
+            <a href="tel:+923007806086" class="inline-flex items-center gap-2.5 bg-white/5 border border-white/10 hover:border-[#FAB516] hover:bg-[#FAB516]/10 transition-all duration-200 px-4 py-2.5 rounded-xl text-[13px] font-light">
+                <span class="w-7 h-7 rounded-lg bg-[#FAB516]/10 border border-[#FAB516]/30 flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-phone text-[#FAB516] text-[11px]"></i>
+                </span>
+                <div>
+                    <p class="text-[10px] text-white/40 leading-none mb-0.5">Call / WhatsApp</p>
+                    <p class="text-white text-[13px] leading-none">0300-7806086</p>
+                </div>
+            </a>
+            <a href="mailto:vartexsoft@gmail.com" class="inline-flex items-center gap-2.5 bg-white/5 border border-white/10 hover:border-[#FAB516] hover:bg-[#FAB516]/10 transition-all duration-200 px-4 py-2.5 rounded-xl text-[13px] font-light">
+                <span class="w-7 h-7 rounded-lg bg-[#FAB516]/10 border border-[#FAB516]/30 flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-envelope text-[#FAB516] text-[11px]"></i>
+                </span>
+                <div>
+                    <p class="text-[10px] text-white/40 leading-none mb-0.5">Email Us</p>
+                    <p class="text-white text-[13px] leading-none">vartexsoft@gmail.com</p>
+                </div>
+            </a>
+            <div class="inline-flex items-center gap-2.5 bg-white/5 border border-white/10 px-4 py-2.5 rounded-xl text-[13px] font-light">
+                <span class="w-7 h-7 rounded-lg bg-[#FAB516]/10 border border-[#FAB516]/30 flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-location-dot text-[#FAB516] text-[11px]"></i>
+                </span>
+                <div>
+                    <p class="text-[10px] text-white/40 leading-none mb-0.5">Visit Us</p>
+                    <p class="text-white text-[13px] leading-none">Rohaan Plaza, Faisal Colony Street 1, Bahawalpur</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main links grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+
+            <div>
+                <h4 class="text-[15px] font-semibold mb-4 text-[#FAB516]" style="font-family: bebas; letter-spacing: 0.05em;">About VartexSoft</h4>
+                <p class="text-[13px] leading-[1.8] mb-5 font-light text-white/60">
+                    VartexSoft is a software house in Bahawalpur, Pakistan, building websites, mobile apps, and digital marketing solutions for businesses across Pakistan. We also run hands-on IT courses for students and professionals.
+                </p>
+                <div class="flex gap-2">
+                    <a href="https://www.tiktok.com/@vartexsoft?lang=en-GB" target="_blank" rel="noopener" class="w-8 h-8 border border-white/10 rounded-lg flex items-center justify-center text-[13px] transition-all duration-200 hover:border-[#FAB516] hover:bg-[#FAB516]/10 hover:-translate-y-0.5"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61586228192824" target="_blank" rel="noopener" class="w-8 h-8 border border-white/10 rounded-lg flex items-center justify-center text-[13px] transition-all duration-200 hover:border-[#FAB516] hover:bg-[#FAB516]/10 hover:-translate-y-0.5"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/vartexsoft/" target="_blank" rel="noopener" class="w-8 h-8 border border-white/10 rounded-lg flex items-center justify-center text-[13px] transition-all duration-200 hover:border-[#FAB516] hover:bg-[#FAB516]/10 hover:-translate-y-0.5"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-[15px] font-semibold mb-4 text-[#FAB516]" style="font-family: bebas; letter-spacing: 0.05em;">Quick Links</h4>
+                <ul class="flex flex-col gap-2">
+                    <li><a href="/" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>Home</a></li>
+                    <li><a href="/about" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>About Us</a></li>
+                    <li><a href="/contact" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>Contact Us</a></li>
+                    <li><a href="/courses" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>Courses</a></li>
+                    <li><a href="/blog" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>Blog</a></li>
+                    <li><a href="/services" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>Services</a></li>
+                    <li><a href="/apply-for-project" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>Apply For Project</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-[15px] font-semibold mb-4 text-[#FAB516]" style="font-family: bebas; letter-spacing: 0.05em;">Services</h4>
+                <ul class="flex flex-col gap-2">
+                    <li><a href="/web-development-service" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>Web Development</a></li>
+                    <li><a href="/digital-marketing-service" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>Digital Marketing</a></li>
+                    <li><a href="/graphic-designing-service" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>Graphic Designing</a></li>
+                    <li><a href="/app-development-service" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>App Development</a></li>
+                    <li><a href="/wordpress-service" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>WordPress</a></li>
+                </ul>
+            </div>
+
+            <div class="relative">
+                <h4 class="text-[15px] font-semibold mb-4 text-[#FAB516]" style="font-family: bebas; letter-spacing: 0.05em;">Courses</h4>
+                <ul id="courseList" class="overflow-hidden max-h-[7.5rem] transition-all duration-300 flex flex-col gap-2">
+                    <li><a href="/web-development-course" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>Web Development</a></li>
+                    <li><a href="/digital-marketing-course" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>Digital Marketing</a></li>
+                    <li><a href="/graphic-designing-course" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>Graphic Designing</a></li>
+                    <li><a href="/app-development-course" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>App Development</a></li>
+                    <li><a href="/wordpress-course" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>Wordpress</a></li>
+                    <li><a href="/shopify-services" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>Shopify</a></li>
+                    <li><a href="/seo-services" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>SEO</a></li>
+                    <li><a href="/tiktok-monetization" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>TikTok Monetization</a></li>
+                    <li><a href="/youtube-automation" class="text-[13px] font-light text-white/60 hover:text-[#FAB516] transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-[#FAB516]/50"></i>YouTube Automation</a></li>
+                </ul>
+                <button id="toggleCourses" class="mt-2 text-[#FAB516] text-[13px] font-semibold hover:underline">More</button>
+            </div>
+
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="pt-5 border-t border-white/10 flex flex-wrap justify-center md:justify-between items-center gap-3">
+            <p class="text-[12px] font-light text-white/50 text-center">
+                © 2026 <a href="/" class="text-[#FAB516] hover:text-[#FFD060] transition-colors">VartexSoft</a>. All rights reserved. Think Higher. Build Smarter.
+            </p>
+            <div class="flex items-center gap-4 text-[12px] text-white/40 font-light">
+                <a href="#" class="hover:text-[#FAB516] transition-colors">Privacy Policy</a>
+                <span class="text-white/20">·</span>
+                <a href="#" class="hover:text-[#FAB516] transition-colors">Terms of Service</a>
+                <span class="text-white/20">·</span>
+                <a href="#" class="hover:text-[#FAB516] transition-colors">Cookie Policy</a>
+            </div>
+            <p class="text-[11px] text-white/30 text-center w-full font-light">
+                Rohaan Plaza, Faisal Colony Street 1, Women University Road, Bahawalpur, Punjab, Pakistan ·
+                <a href="tel:+923007806086" class="hover:text-[#FAB516] transition-colors">+92 300 780 6086</a> ·
+                CEO: Areeb Sarwar
+            </p>
+        </div>
+
+    </footer>
+
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        menuBtn.addEventListener("click", () => { mobileMenu.classList.toggle("hidden"); });
+        const navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", () => {
+            navbar.classList.toggle("shadow-2xl", window.scrollY > 10);
+        });
+
+        const toggleBtn = document.getElementById('toggleCourses');
+        const courseList = document.getElementById('courseList');
+        let expanded = false;
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                if (!expanded) {
+                    courseList.style.maxHeight = courseList.scrollHeight + "px";
+                    toggleBtn.textContent = "Less";
+                } else {
+                    courseList.style.maxHeight = "7.5rem";
+                    toggleBtn.textContent = "More";
+                }
+                expanded = !expanded;
+            });
+        }
+    });
+
+    function toggleFAQ(btn) {
+        const item = btn.closest(".faq-item");
+        const isActive = item.classList.contains("active");
+        document.querySelectorAll(".faq-item.active").forEach((el) => {
+            el.classList.remove("active");
+            el.querySelector(".faq-icon i").classList.remove("fa-minus");
+            el.querySelector(".faq-icon i").classList.add("fa-plus");
+        });
+        if (!isActive) {
+            item.classList.add("active");
+            btn.querySelector(".faq-icon i").classList.remove("fa-plus");
+            btn.querySelector(".faq-icon i").classList.add("fa-minus");
+        }
+    }
+</script>
+</body>
+</html>

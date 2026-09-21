@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Block old raw source files (clean URLs are canonical)
+Disallow: /src/
+
+# Block non-public/system paths
+Disallow: /cgi-bin/
+Disallow: /*?*
+Disallow: /404.html
+
+Sitemap: https://vartexsoft.com/sitemap.xml

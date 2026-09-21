@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="/src/output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/solid.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init("z15-yFueNMk1EHZG4");</script>
+  <title>Take Admission | VartexSoft Courses</title>
+  <style>
+    #admissionForm.is-submitted {
+      filter: blur(5px);
+      opacity: .45;
+      pointer-events: none;
+    }
+
+    #successOverlay {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 7rem 1.25rem 2rem;
+      background: rgba(16, 17, 32, .45);
+      backdrop-filter: blur(4px);
+    }
+
+    #successOverlay.hidden {
+      display: none;
+    }
+
+    #successOverlay .success-card {
+      width: min(100%, 32rem);
+      border: 1px solid rgba(250, 181, 22, .45);
+      border-radius: 1rem;
+      padding: 1.25rem 1.5rem;
+      color: white;
+      background: #1b1c2a;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, .35);
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      main {
+        padding: 2rem 1rem;
+      }
+
+      #admissionForm {
+        gap: 1rem;
+        padding: 1.25rem;
+      }
+
+      #admissionForm > div {
+        gap: 1rem;
+      }
+
+      #admissionForm label {
+        gap: .35rem;
+        line-height: 1.3;
+      }
+
+      #admissionForm input,
+      #admissionForm select,
+      #admissionForm textarea {
+        margin-top: .25rem;
+        min-height: 2.75rem;
+        padding: .7rem .85rem;
+      }
+
+      #admissionForm textarea {
+        min-height: 6rem;
+      }
+
+      #admissionForm button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50" style="font-family: outfit;">
+  <nav class="flex items-center justify-between px-6 py-4 bg-gray-50 border-b border-black/10">
+    <a href="../index.html"><img src="../images/logo2.png" class="w-auto h-10" alt="VartexSoft Logo" width="180" height="48"></a>
+    <a href="../index.html" class="text-sm font-semibold text-[#101120]">Back to Home</a>
+  </nav>
+
+  <main class="py-12 px-6 md:px-[6%]">
+    <div class="max-w-3xl mx-auto">
+      <div class="mb-4 text-[11px] font-bold uppercase tracking-widest text-[#FAB516]">Admissions</div>
+      <h1 class="font-bebas leading-none tracking-wide text-black mb-4" style="font-size: clamp(48px, 8vw, 80px);">TAKE <span class="text-[#FAB516]">ADMISSION</span></h1>
+      <p class="text-[16px] text-black/75 leading-[1.7] mb-8">Complete the form below to reserve your place in one of our practical, career-focused courses. Our team will contact you with the next steps.</p>
+
+      <form id="admissionForm" class="bg-[#1B1C2A] rounded-2xl p-6 md:p-10 flex flex-col gap-6">
+        <input type="hidden" name="form_type" value="Course Admission">
+        <div class="grid md:grid-cols-2 gap-5">
+          <label class="flex flex-col gap-2 text-[12px] font-semibold text-white uppercase tracking-wide">Full Name <span class="text-[#FAB516]">*
+            <input type="text" name="name" placeholder="Enter your name" required class="mt-2 w-full normal-case tracking-normal font-normal bg-[#101120] border border-white/10 rounded-xl px-4 py-3 text-[14px] text-white outline-none focus:border-[#FAB516]/60">
+          </span></label>
+          <label class="flex flex-col gap-2 text-[12px] font-semibold text-white uppercase tracking-wide">Email Address <span class="text-[#FAB516]">*
+            <input type="email" name="email" placeholder="Enter your email" required class="mt-2 w-full normal-case tracking-normal font-normal bg-[#101120] border border-white/10 rounded-xl px-4 py-3 text-[14px] text-white outline-none focus:border-[#FAB516]/60">
+          </span></label>
+        </div>
+        <div class="grid md:grid-cols-2 gap-5">
+          <label class="flex flex-col gap-2 text-[12px] font-semibold text-white uppercase tracking-wide">Phone Number <span class="text-[#FAB516]">*
+            <input type="tel" name="phone" placeholder="Enter your phone number" required class="mt-2 w-full normal-case tracking-normal font-normal bg-[#101120] border border-white/10 rounded-xl px-4 py-3 text-[14px] text-white outline-none focus:border-[#FAB516]/60">
+          </span></label>
+          <label class="flex flex-col gap-2 text-[12px] font-semibold text-white uppercase tracking-wide">City <span class="text-[#FAB516]">*
+            <input type="text" name="city" placeholder="Enter your city" required class="mt-2 w-full normal-case tracking-normal font-normal bg-[#101120] border border-white/10 rounded-xl px-4 py-3 text-[14px] text-white outline-none focus:border-[#FAB516]/60">
+          </span></label>
+        </div>
+        <label class="flex flex-col gap-2 text-[12px] font-semibold text-white uppercase tracking-wide">Choose Course <span class="text-[#FAB516]">*
+          <select name="course" required class="mt-2 w-full normal-case tracking-normal font-normal bg-[#101120] border border-white/10 rounded-xl px-4 py-3 text-[14px] text-white outline-none focus:border-[#FAB516]/60">
+            <option value="" disabled selected>Select a course</option>
+            <option>Web Development</option>
+            <option>App Development</option>
+            <option>Digital Marketing</option>
+            <option>Graphic Design</option>
+            <option>WordPress</option>
+            <option>Shopify</option>
+            <option>SEO</option>
+            <option>TikTok Monetization</option>
+            <option>YouTube Automation</option>
+          </select>
+        </span></label>
+        <label class="flex flex-col gap-2 text-[12px] font-semibold text-white uppercase tracking-wide">Message <span class="text-white/50 normal-case tracking-normal font-normal">(Optional)
+          <textarea name="message" rows="4" placeholder="Tell us anything we should know" class="mt-2 w-full normal-case tracking-normal bg-[#101120] border border-white/10 rounded-xl px-4 py-3 text-[14px] text-white outline-none focus:border-[#FAB516]/60"></textarea>
+        </span></label>
+        <button type="submit" class="self-start bg-[#FAB516] text-[#101120] px-6 py-3 rounded-xl text-sm font-bold hover:bg-white transition">Submit Admission <i class="fa-solid fa-arrow-right ml-1"></i></button>
+        <p id="formMessage" class="hidden text-sm"></p>
+      </form>
+    </div>
+  </main>
+
+  <div id="successOverlay" class="hidden" role="status" aria-live="polite">
+    <div class="success-card">
+      <i class="fa-solid fa-circle-check text-[#FAB516] text-3xl mb-3"></i>
+      <p id="successText" class="text-white text-base font-semibold">Thank you! Your admission request has been sent.</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('admissionForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const form = event.target;
+      const message = document.getElementById('formMessage');
+      const button = form.querySelector('button[type="submit"]');
+      const successOverlay = document.getElementById('successOverlay');
+      const data = Object.fromEntries(new FormData(form).entries());
+      data.to_email = 'vartexsoft@gmail.com';
+      data.recipient = 'vartexsoft@gmail.com';
+      data.track = data.course;
+      data.course_name = data.course;
+      data.selected_course = data.course;
+      data.message = `Selected Course: ${data.course}\n${data.message || ''}`;
+
+      message.className = 'text-sm text-[#FAB516]';
+      message.textContent = 'Sending your admission request...';
+      button.disabled = true;
+
+      emailjs.send('service_m0i4xz3', 'template_jdotygi', data)
+        .then(() => {
+          message.className = 'hidden text-sm';
+          successOverlay.classList.remove('hidden');
+          form.classList.add('is-submitted');
+          form.reset();
+        })
+        .catch(() => {
+          message.textContent = 'Something went wrong. Please try again or contact us directly.';
+          message.className = 'text-sm text-red-400';
+        })
+        .finally(() => {
+          button.disabled = false;
+        });
+    });
+  </script>
+</body>
+</html>

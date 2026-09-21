@@ -1,0 +1,300 @@
+RewriteEngine On
+
+# ---------------------------------------------------
+# STEP 1: Force HTTPS + non-www (Canonical Domain)
+# ---------------------------------------------------
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://vartexsoft.com%{REQUEST_URI} [R=301,L]
+
+# Force non-www
+RewriteCond %{HTTP_HOST} ^www\.vartexsoft\.com$ [NC]
+RewriteRule ^ https://vartexsoft.com%{REQUEST_URI} [R=301,L]
+
+# ---------------------------------------------------
+# STEP 1B: Remove trailing slash from clean URLs
+# (Avoids duplicate content issues in SEO)
+# ---------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+
+# ---------------------------------------------------
+# STEP 2: Redirect OLD .html / /src/ URLs to CLEAN URLs
+# (Uses THE_REQUEST to prevent internal redirect loops)
+# ---------------------------------------------------
+RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Redirect legacy root-level HTML URLs to their clean URLs.
+RewriteRule ^services\.html$ /services [R=301,L,NC]
+RewriteRule ^courses\.html$ /courses [R=301,L,NC]
+RewriteRule ^dubai-services\.html$ /dubai-services [R=301,L,NC]
+RewriteRule ^blog\.html$ /blog [R=301,L,NC]
+RewriteRule ^aboutUs\.html$ /about [R=301,L,NC]
+RewriteRule ^contactUs\.html$ /contact [R=301,L,NC]
+RewriteRule ^applyForAdmission\.html$ /apply-for-admission [R=301,L,NC]
+RewriteRule ^applyForProject\.html$ /apply-for-project [R=301,L,NC]
+RewriteRule ^applyForInternship\.html$ /apply-for-internship [R=301,L,NC]
+RewriteRule ^webDevelopmentService\.html$ /web-development-service [R=301,L,NC]
+RewriteRule ^digitalMarketingService\.html$ /digital-marketing-service [R=301,L,NC]
+RewriteRule ^digital-marketing-services-dubai\.html$ /digital-marketing-services-dubai [R=301,L,NC]
+RewriteRule ^ai-automation-services\.html$ /ai-automation-services [R=301,L,NC]
+RewriteRule ^ai-automation-services-dubai\.html$ /ai-automation-services-dubai [R=301,L,NC]
+RewriteRule ^appdevelopment-services-dubai\.html$ /app-development-services-dubai [R=301,L,NC]
+RewriteRule ^seo-services-dubai\.html$ /seo-services-dubai [R=301,L,NC]
+RewriteRule ^web-development-services-dubai\.html$ /web-development-services-dubai [R=301,L,NC]
+RewriteRule ^wordpress-services-dubai\.html$ /wordpress-services-dubai [R=301,L,NC]
+RewriteRule ^graphicDesigningService\.html$ /graphic-designing-service [R=301,L,NC]
+RewriteRule ^appDevelopmentService\.html$ /app-development-service [R=301,L,NC]
+RewriteRule ^wordpressService\.html$ /wordpress-service [R=301,L,NC]
+RewriteRule ^machine-learning-python-service\.html$ /machine-learning-python-service [R=301,L,NC]
+RewriteRule ^seo\.html$ /seo-services [R=301,L,NC]
+RewriteRule ^shopify\.html$ /shopify-services [R=301,L,NC]
+RewriteRule ^shopify-services-dubai\.html$ /shopify-services-dubai [R=301,L,NC]
+RewriteRule ^tiktok\.html$ /tiktok-monetization [R=301,L,NC]
+RewriteRule ^youTubeAutomation\.html$ /youtube-automation [R=301,L,NC]
+RewriteRule ^webDevelopmentPage\.html$ /web-development-course [R=301,L,NC]
+RewriteRule ^digitalMarketing\.html$ /digital-marketing-course [R=301,L,NC]
+RewriteRule ^graphicDesigning\.html$ /graphic-designing-course [R=301,L,NC]
+RewriteRule ^appDevelopment\.html$ /app-development-course [R=301,L,NC]
+RewriteRule ^wordpressCourse\.html$ /wordpress-course [R=301,L,NC]
+RewriteRule ^blog/digital-marketing-strategies\.html$ /blog/digital-marketing-strategies [R=301,L,NC]
+RewriteRule ^blog/Flutter-vs-React-Native-Which-is-Better\.html$ /blog/flutter-vs-react-native [R=301,L,NC]
+RewriteRule ^blog/how-to-build-responsive-website\.html$ /blog/how-to-build-responsive-website [R=301,L,NC]
+RewriteRule ^blog/How-to-Grow-Your-Business-on-TikTok\.html$ /blog/grow-business-on-tiktok [R=301,L,NC]
+RewriteRule ^blog/How-to-Start-Freelancing-as-a-Web-Developer\.html$ /blog/start-freelancing-web-developer [R=301,L,NC]
+RewriteRule ^blog/seo-tips-rank-google-first-page\.html$ /blog/seo-tips-rank-google-first-page [R=301,L,NC]
+RewriteRule ^blog/UX-Design-Principles-Every-Designe-Should-Know\.html$ /blog/ux-design-principles [R=301,L,NC]
+RewriteRule ^blog/WordPress-vs-Custom-Website\.html$ /blog/wordpress-vs-custom-website [R=301,L,NC]
+RewriteRule ^blog/YouTube-Automation-Complete-Growth-Guide\.html$ /blog/youtube-automation-growth-guide [R=301,L,NC]
+RewriteRule ^blog/python-for-machine-learning-ai-guide\.html$ /blog/python-for-machine-learning-ai-guide [R=301,L,NC]
+
+RewriteCond %{THE_REQUEST} \s/src/services\.html[\s?] [NC]
+RewriteRule ^src/services\.html$ /services [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/courses\.html[\s?] [NC]
+RewriteRule ^src/courses\.html$ /courses [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/blog\.html[\s?] [NC]
+RewriteRule ^src/blog\.html$ /blog [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/aboutUs\.html[\s?] [NC]
+RewriteRule ^src/aboutUs\.html$ /about [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/contactUs\.html[\s?] [NC]
+RewriteRule ^src/contactUs\.html$ /contact [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/dubai-services\.html[\s?] [NC]
+RewriteRule ^src/dubai-services\.html$ /dubai-services [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/applyForAdmission\.html[\s?] [NC]
+RewriteRule ^src/applyForAdmission\.html$ /student-admission [R=301,L]
+RewriteRule ^student-admission$ src/applyForAdmission.html [L]
+
+RewriteCond %{THE_REQUEST} \s/src/applyForProject\.html[\s?] [NC]
+RewriteRule ^src/applyForProject\.html$ /apply-for-project [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/applyForInternship\.html[\s?] [NC]
+RewriteRule ^src/applyForInternship\.html$ /apply-for-internship [R=301,L]
+
+
+
+# Service Pages Redirects
+RewriteCond %{THE_REQUEST} \s/src/webDevelopmentService\.html[\s?] [NC]
+RewriteRule ^src/webDevelopmentService\.html$ /web-development-service [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/digitalMarketingService\.html[\s?] [NC]
+RewriteRule ^src/digitalMarketingService\.html$ /digital-marketing-service [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/digital-marketing-services-dubai\.html[\s?] [NC]
+RewriteRule ^src/digital-marketing-services-dubai\.html$ /digital-marketing-services-dubai [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/ai-automation-services\.html[\s?] [NC]
+RewriteRule ^src/ai-automation-services\.html$ /ai-automation-services [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/ai-automation-services-dubai\.html[\s?] [NC]
+RewriteRule ^src/ai-automation-services-dubai\.html$ /ai-automation-services-dubai [R=301,L]
+
+# Old AI automation Dubai URL -> new clean URL (keep SEO value)
+RewriteRule ^ai-automation-dubai$ /ai-automation-services-dubai [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/appdevelopment-services-dubai\.html[\s?] [NC]
+RewriteRule ^src/appdevelopment-services-dubai\.html$ /app-development-services-dubai [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/seo-services-dubai\.html[\s?] [NC]
+RewriteRule ^src/seo-services-dubai\.html$ /seo-services-dubai [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/web-development-services-dubai\.html[\s?] [NC]
+RewriteRule ^src/web-development-services-dubai\.html$ /web-development-services-dubai [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/wordpress-services-dubai\.html[\s?] [NC]
+RewriteRule ^src/wordpress-services-dubai\.html$ /wordpress-services-dubai [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/graphicDesigningService\.html[\s?] [NC]
+RewriteRule ^src/graphicDesigningService\.html$ /graphic-designing-service [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/appDevelopmentService\.html[\s?] [NC]
+RewriteRule ^src/appDevelopmentService\.html$ /app-development-service [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/wordpressService\.html[\s?] [NC]
+RewriteRule ^src/wordpressService\.html$ /wordpress-service [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/machine-learning-python-service\.html[\s?] [NC]
+RewriteRule ^src/machine-learning-python-service\.html$ /machine-learning-python-service [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/seo\.html[\s?] [NC]
+RewriteRule ^src/seo\.html$ /seo-services [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/shopify\.html[\s?] [NC]
+RewriteRule ^src/shopify\.html$ /shopify-services [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/shopify-services-dubai\.html[\s?] [NC]
+RewriteRule ^src/shopify-services-dubai\.html$ /shopify-services-dubai [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/tiktok\.html[\s?] [NC]
+RewriteRule ^src/tiktok\.html$ /tiktok-monetization [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/youTubeAutomation\.html[\s?] [NC]
+RewriteRule ^src/youTubeAutomation\.html$ /youtube-automation [R=301,L]
+
+# Course Pages Redirects
+RewriteCond %{THE_REQUEST} \s/src/webDevelopmentPage\.html[\s?] [NC]
+RewriteRule ^src/webDevelopmentPage\.html$ /web-development-course [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/digitalMarketing\.html[\s?] [NC]
+RewriteRule ^src/digitalMarketing\.html$ /digital-marketing-course [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/graphicDesigning\.html[\s?] [NC]
+RewriteRule ^src/graphicDesigning\.html$ /graphic-designing-course [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/appDevelopment\.html[\s?] [NC]
+RewriteRule ^src/appDevelopment\.html$ /app-development-course [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/wordpressCourse\.html[\s?] [NC]
+RewriteRule ^src/wordpressCourse\.html$ /wordpress-course [R=301,L]
+
+# Blog Posts Redirects
+RewriteCond %{THE_REQUEST} \s/src/blog/digital-marketing-strategies\.html[\s?] [NC]
+RewriteRule ^src/blog/digital-marketing-strategies\.html$ /blog/digital-marketing-strategies [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/blog/Flutter-vs-React-Native-Which-is-Better\.html[\s?] [NC]
+RewriteRule ^src/blog/Flutter-vs-React-Native-Which-is-Better\.html$ /blog/flutter-vs-react-native [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/blog/how-to-build-responsive-website\.html[\s?] [NC]
+RewriteRule ^src/blog/how-to-build-responsive-website\.html$ /blog/how-to-build-responsive-website [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/blog/How-to-Grow-Your-Business-on-TikTok\.html[\s?] [NC]
+RewriteRule ^src/blog/How-to-Grow-Your-Business-on-TikTok\.html$ /blog/grow-business-on-tiktok [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/blog/How-to-Start-Freelancing-as-a-Web-Developer\.html[\s?] [NC]
+RewriteRule ^src/blog/How-to-Start-Freelancing-as-a-Web-Developer\.html$ /blog/start-freelancing-web-developer [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/blog/seo-tips-rank-google-first-page\.html[\s?] [NC]
+RewriteRule ^src/blog/seo-tips-rank-google-first-page\.html$ /blog/seo-tips-rank-google-first-page [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/blog/UX-Design-Principles-Every-Designe-Should-Know\.html[\s?] [NC]
+RewriteRule ^src/blog/UX-Design-Principles-Every-Designe-Should-Know\.html$ /blog/ux-design-principles [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/blog/WordPress-vs-Custom-Website\.html[\s?] [NC]
+RewriteRule ^src/blog/WordPress-vs-Custom-Website\.html$ /blog/wordpress-vs-custom-website [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/blog/YouTube-Automation-Complete-Growth-Guide\.html[\s?] [NC]
+RewriteRule ^src/blog/YouTube-Automation-Complete-Growth-Guide\.html$ /blog/youtube-automation-growth-guide [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/src/blog/python-for-machine-learning-ai-guide\.html[\s?] [NC]
+RewriteRule ^src/blog/python-for-machine-learning-ai-guide\.html$ /blog/python-for-machine-learning-ai-guide [R=301,L]
+
+# ---------------------------------------------------
+# STEP 3: Internal Rewrites (Serving content silently)
+# ---------------------------------------------------
+RewriteRule ^services$ src/services.html [L]
+RewriteRule ^courses$ src/courses.html [L]
+RewriteRule ^blog$ src/blog.html [L]
+RewriteRule ^about$ src/aboutUs.html [L]
+RewriteRule ^contact$ src/contactUs.html [L]
+RewriteRule ^dubai-services$ src/dubai-services.html [L]
+RewriteRule ^apply-for-admission$ src/applyForAdmission.html [L]
+RewriteRule ^apply-for-project$ src/applyForProject.html [L]
+RewriteRule ^apply-for-internship$ src/applyForInternship.html [L]
+
+RewriteRule ^web-development-service$ src/webDevelopmentService.html [L]
+RewriteRule ^digital-marketing-service$ src/digitalMarketingService.html [L]
+RewriteRule ^digital-marketing-services-dubai$ src/digital-marketing-services-dubai.html [L]
+RewriteRule ^ai-automation-services$ src/ai-automation-services.html [L]
+RewriteRule ^ai-automation-services-dubai$ src/ai-automation-services-dubai.html [L]
+RewriteRule ^app-development-services-dubai$ src/appdevelopment-services-dubai.html [L]
+RewriteRule ^seo-services-dubai$ src/seo-services-dubai.html [L]
+RewriteRule ^web-development-services-dubai$ src/web-development-services-dubai.html [L]
+RewriteRule ^wordpress-services-dubai$ src/wordpress-services-dubai.html [L]
+RewriteRule ^graphic-designing-service$ src/graphicDesigningService.html [L]
+RewriteRule ^app-development-service$ src/appDevelopmentService.html [L]
+RewriteRule ^wordpress-service$ src/wordpressService.html [L]
+RewriteRule ^machine-learning-python-service$ src/machine-learning-python-service.html [L]
+RewriteRule ^seo-services$ src/seo.html [L]
+RewriteRule ^shopify-services$ src/shopify.html [L]
+RewriteRule ^shopify-services-dubai$ src/shopify-services-dubai.html [L]
+RewriteRule ^tiktok-monetization$ src/tiktok.html [L]
+RewriteRule ^youtube-automation$ src/youTubeAutomation.html [L]
+
+RewriteRule ^web-development-course$ src/webDevelopmentPage.html [L]
+RewriteRule ^digital-marketing-course$ src/digitalMarketing.html [L]
+RewriteRule ^graphic-designing-course$ src/graphicDesigning.html [L]
+RewriteRule ^app-development-course$ src/appDevelopment.html [L]
+RewriteRule ^wordpress-course$ src/wordpressCourse.html [L]
+
+RewriteRule ^blog/digital-marketing-strategies$ src/blog/digital-marketing-strategies.html [L]
+RewriteRule ^blog/flutter-vs-react-native$ src/blog/Flutter-vs-React-Native-Which-is-Better.html [L]
+RewriteRule ^blog/how-to-build-responsive-website$ src/blog/how-to-build-responsive-website.html [L]
+RewriteRule ^blog/grow-business-on-tiktok$ src/blog/How-to-Grow-Your-Business-on-TikTok.html [L]
+RewriteRule ^blog/start-freelancing-web-developer$ src/blog/How-to-Start-Freelancing-as-a-Web-Developer.html [L]
+RewriteRule ^blog/seo-tips-rank-google-first-page$ src/blog/seo-tips-rank-google-first-page.html [L]
+RewriteRule ^blog/ux-design-principles$ src/blog/UX-Design-Principles-Every-Designe-Should-Know.html [L]
+RewriteRule ^blog/wordpress-vs-custom-website$ src/blog/WordPress-vs-Custom-Website.html [L]
+RewriteRule ^blog/youtube-automation-growth-guide$ src/blog/YouTube-Automation-Complete-Growth-Guide.html [L]
+RewriteRule ^blog/python-for-machine-learning-ai-guide$ src/blog/python-for-machine-learning-ai-guide.html [L]
+
+# ---------------------------------------------------
+# STEP 4: Home Page Settings
+# ---------------------------------------------------
+DirectoryIndex index.html
+
+# ---------------------------------------------------
+# STEP 5: Performance — Enable GZIP Compression
+# ---------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json application/ld+json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ---------------------------------------------------
+# STEP 6: Performance — Browser Caching
+# ---------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# ---------------------------------------------------
+# STEP 7: Basic Security Headers
+# ---------------------------------------------------
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ---------------------------------------------------
+# STEP 8: Hide Directory Listing
+# ---------------------------------------------------
+Options -Indexes
