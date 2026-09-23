@@ -1117,6 +1117,14 @@ src="https://www.facebook.com/tr?id=1028812633079142&ev=PageView&noscript=1"/></
 
         </div>
     </section>
+    <style>
+    .dot.active {
+        background-color: #FAB516 !important;
+    }
+    .dot:hover {
+        background-color: #FAB516;
+    }
+</style>
 
     <!-- FAQs  -->
     <section class="py-10 md:py-15 lg:py-15 px-6 md:px-[6%] bg-gray-50 text-black">
@@ -1424,7 +1432,7 @@ src="https://www.facebook.com/tr?id=1028812633079142&ev=PageView&noscript=1"/></
             const dotIndex = Math.floor(index * dots.length / totalSlides);
 
             if (dots[dotIndex]) {
-                dots[dotIndex].classList.add('bg-yellow-400');
+                dots[dotIndex].classList.add('bg-[#FAB516]');
             }
         }
 
@@ -1437,6 +1445,12 @@ src="https://www.facebook.com/tr?id=1028812633079142&ev=PageView&noscript=1"/></
             index = (index - 1 + totalSlides) % totalSlides;
             updateSlider();
         }
+        dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+        index = i;
+        updateSlider();
+    });
+});
 
         // Auto Slide
         setInterval(nextSlide, 4000);
